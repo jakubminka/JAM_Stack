@@ -22,6 +22,10 @@ color:
   primary-dark: "#000000"
   links: "#219ab3"
   background: "f8f8ff"
+
+# ALGOLIA NASTAVENÍ
+algolia:
+  application_id: "PDMQTM8G33"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
