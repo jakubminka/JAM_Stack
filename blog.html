@@ -5,23 +5,27 @@ permalink: /blog/
 navigation_weight: 4
 ---
 
-<div class="container">
-  <div class="row">
-    {% for post in site.posts %}
-    <div class="card" style="width: 18rem;">
-      <img
-        class="card-img-top"
-        src="{{ post.thumbnail }}"
-        alt="Card image cap"
-      />
-      <div class="card-body">
-        <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">{{ post.excerpt }}</p>
-        <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary"
-          >Odkaz</a
-        >
+<section id="posts" class="py-5">
+  <div class="container">
+    <div class="row">
+      {% for post in site.posts %}
+      <div class="card" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          src="{{ post.thumbnail }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.excerpt }}</p>
+          <a
+            href="{{ post.url | prepend: site.baseurl }}"
+            class="btn btn-primary"
+            >Odkaz</a
+          >
+        </div>
       </div>
+      {% endfor %}
     </div>
-    {% endfor %}
   </div>
-</div>
+</section>
