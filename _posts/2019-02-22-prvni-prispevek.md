@@ -1,10 +1,12 @@
 ---
 layout: post
-title: "První příspěvek"
-excerpt: Prvni prispevek stranky
-date: 2019-02-22 13:03:25 +0100
+title: První příspěvek
+author: Jakub Minka
+date: 2019-02-20T19:09:15.487Z
+thumbnail: /images/uploads/img_1386.jpg
+rating: 1
 categories: blog
-thumbnail: assets/images/slide1.jpg
+comments: true
 ---
 
 První příspěvek stránky
