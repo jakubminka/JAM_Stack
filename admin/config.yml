@@ -1,6 +1,8 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: jakubminka/JAM_Stack
   branch: master
+  site_domain: https://zen-torvalds-384b19.netlify.com/
 
 publish_mode: editorial_workflow
 
