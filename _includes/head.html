@@ -1,0 +1,48 @@
+<!-- HLAVIČKA STRÁNKY -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta http-equiv="content-type" content="text/html" />
+
+  <!-- Automaticky generovaný titulek stránky -->
+  <title>
+    {% if page.title %}{{ page.title | escape }} - {{ site.title | escape }} {%
+    else %}{{ site.title | escape }}{% endif %}
+  </title>
+
+  <!-- Nastavení viewportu pro responzivitu -->
+  <meta name="viewport" content="width=device-width" initial-scale=1,
+  shrink-to-fit=no">
+
+  <!-- Automaticky generovaný popis stránky -->
+  <meta
+    name="description"
+    content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}"
+  />
+
+  <!-- Klíčová slova a nastavení indexování -->
+  <meta name="keywords" content="jam stack, javascript, api, markup, jekyll" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Nastavení kanonické url -->
+  <link
+    rel="canonical"
+    href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}"
+  />
+
+  <!-- Hlavní css -->
+  <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
+
+  <!-- Boostrap CSS -->
+  <link
+    rel="stylesheet"
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
