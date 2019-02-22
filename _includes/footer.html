@@ -17,16 +17,21 @@
             <input
               class="form-control form-control-sm mr-3 w-75"
               type="text"
-              placeholder="Search"
+              placeholder="Hledat"
               aria-label="Search"
             />
             <i class="fas fa-search" aria-hidden="true"></i>
           </form>
-          <form class="input-group">
+          <form
+            name="subscription"
+            class="input-group"
+            method="POST"
+            data-netlify="true"
+          >
             <input
               type="text"
               class="form-control form-control-sm"
-              placeholder="Your email"
+              placeholder="Email"
               aria-label="Your email"
               aria-describedby="basic-addon2"
             />
