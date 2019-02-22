@@ -16,12 +16,9 @@ permalink: /blog/
       />
       <div class="card-body">
         <h5 class="card-title">{{ post.title }}</h5>
-        <p class="card-text">
-          Some quick example text to build on the card title and make up the
-          bulk of the card's content.
-        </p>
+        <p class="card-text">{{ post.excerpt }}</p>
         <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary"
-          >Go somewhere</a
+          >Odkaz</a
         >
       </div>
     </div>
