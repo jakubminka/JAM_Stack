@@ -14,12 +14,11 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "post" }
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Excerpt", name: "excerpt", widget: "string" }
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Popis", name: "excerpt", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Featured Image", name: "thumbnail", widget: "image" }
-      - { label: "Rating (scale of 1-5)", name: "rating", widget: "number" }
-      - { label: "Categories", name: "categories", widget: "string" }
-      - { label: "Comments", name: "comments", widget: "boolean" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - { label: "Datum publikování", name: "date", widget: "datetime" }
+      - { label: "Ilustrační obrázek", name: "thumbnail", widget: "image" }
+      - { label: "Kategorie", name: "categories", widget: "string" }
+      - { label: "Komenty", name: "comments", widget: "boolean" }
+      - { label: "Text", name: "body", widget: "markdown" }
