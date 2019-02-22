@@ -16,6 +16,8 @@ theme: minima
 plugins:
   - jekyll-feed
 permalink: pretty
+sass:
+  sass_dir: _sass
 
 # DEFINICE GLOBÁLNÍCH PROMĚNNÝCH
 color:
