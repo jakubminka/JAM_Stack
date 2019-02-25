@@ -5,71 +5,64 @@ permalink: /api/
 navigation_weight: 3
 ---
 
-<div class="container-fluid">
-  <div class="container">
-    <div class="formBox">
-      <form name="contact" method="POST" data-netlify="true">
-        <div class="row">
-          <div class="col-sm-12"><h1>Kontaktní formulář</h1></div>
-        </div>
+<div class="container">
+  <div class="formBox">
+    <form name="contact" method="POST" data-netlify="true">
+      <div class="row">
+        <div class="col-sm-12"><h1>Kontaktní formulář</h1></div>
+      </div>
 
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="inputBox ">
-              <div class="inputText">Jméno</div>
-              <input
-                type="text"
-                name="jmeno"
-                class="input"
-                style="display: none"
-              />
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="inputBox">
-              <div class="inputText">Příjmení</div>
-              <input type="text" name="prijmeni" class="input" />
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="inputBox">
-              <div class="inputText">Email</div>
-              <input type="text" name="email" class="input" />
-            </div>
-          </div>
-
-          <div class="col-sm-6">
-            <div class="inputBox">
-              <div class="inputText">Telefon</div>
-              <input type="text" name="telefon" class="input" />
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="inputBox">
-              <div class="inputText">Zpráva</div>
-              <textarea name="message" class="input"></textarea>
-            </div>
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-sm-12">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="inputBox ">
+            <div class="inputText">Jméno</div>
             <input
-              type="submit"
-              name=""
-              class="button"
-              value="Odeslat zprávu"
+              type="text"
+              name="jmeno"
+              class="input"
+              style="display: none"
             />
           </div>
         </div>
-      </form>
-    </div>
+
+        <div class="col-sm-6">
+          <div class="inputBox">
+            <div class="inputText">Příjmení</div>
+            <input type="text" name="prijmeni" class="input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="inputBox">
+            <div class="inputText">Email</div>
+            <input type="text" name="email" class="input" />
+          </div>
+        </div>
+
+        <div class="col-sm-6">
+          <div class="inputBox">
+            <div class="inputText">Telefon</div>
+            <input type="text" name="telefon" class="input" />
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="inputBox">
+            <div class="inputText">Zpráva</div>
+            <textarea name="message" class="input"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-12">
+          <input type="submit" name="" class="button" value="Odeslat zprávu" />
+        </div>
+      </div>
+    </form>
   </div>
 </div>
