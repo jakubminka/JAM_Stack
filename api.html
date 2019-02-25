@@ -7,7 +7,12 @@ navigation_weight: 3
 
 <div class="container">
   <div class="formBox">
-    <form name="contact" method="POST" data-netlify="true">
+    <form
+      name="contact"
+      method="POST"
+      data-netlify-recaptcha="true"
+      data-netlify="true"
+    >
       <div class="row">
         <div class="col-sm-12"><h1>Kontaktní formulář</h1></div>
       </div>
@@ -71,7 +76,7 @@ navigation_weight: 3
           </div>
         </div>
       </div>
-
+      <div class="row"><div data-netlify-recaptcha="true"></div></div>
       <div class="row">
         <div class="col-sm-12">
           <input type="submit" name="" class="button" value="Odeslat zprávu" />

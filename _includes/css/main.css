@@ -1,3 +1,10 @@
+.card-img-top img {
+  max-width: 230px;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+}
+
 .bg-apend {
   background-size: cover;
   background-position: center;
