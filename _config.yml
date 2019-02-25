@@ -15,6 +15,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-paginate
 
 permalink: pretty
 sass:
@@ -32,8 +33,6 @@ algolia:
 
 # PAGINATE PLUGIN
 paginate: 5
-
-gems: [jekyll-paginate]
 # paginate_path: "/posts/page:num/"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
