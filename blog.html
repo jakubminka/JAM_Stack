@@ -9,22 +9,28 @@ pagination:
 
 <section id="posts" class="py-5">
   <div class="container">
-    <div class="card-deck">
-      {% for post in site.posts %}
-      <div class="card">
-        <img class="card-img-top" src="{{ post.thumbnail }}" alt="Card image" />
-        <div class="card-body">
-          <h5 class="card-title">{{ post.title }}</h5>
-          <p class="card-text">{{ post.excerpt }}</p>
-          <a
-            href="{{ post.url | prepend: site.baseurl }}"
-            class="btn
+    <div class="row">
+      <div class="col-md-6 col-lg-4 col-xl-3">
+        {% for post in site.posts %}
+        <div class="card">
+          <img
+            class="card-img-top"
+            src="{{ post.thumbnail }}"
+            alt="Card image"
+          />
+          <div class="card-body">
+            <h5 class="card-title">{{ post.title }}</h5>
+            <p class="card-text">{{ post.excerpt }}</p>
+            <a
+              href="{{ post.url | prepend: site.baseurl }}"
+              class="btn
             btn-primary"
-            >Více</a
-          >
+              >Více</a
+            >
+          </div>
         </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
 </section>
