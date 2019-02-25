@@ -34,11 +34,7 @@
 <!-- Skript frameworku Vanilla.js -->
 <script src="/assets/js/vanilla.js"></script>
 <script>
-  var brand = document.getElementById("brand-hover").style;
-  brand.opacity = 1;
-  (function fade() {
-    (brand.opacity -= 0.1) < 0
-      ? (brand.display = "none")
-      : setTimeout(fade, 40);
-  })();
+  function brandAnimate() {
+    color: red;
+  }
 </script>
