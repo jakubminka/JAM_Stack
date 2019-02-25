@@ -16,9 +16,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-gems:
-  - jekyll-paginate-v2
-
 permalink: pretty
 sass:
   sass_dir: _sass
