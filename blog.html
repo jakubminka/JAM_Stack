@@ -11,13 +11,9 @@ pagination:
   <div class="container">
     <div class="row">
       {% for post in site.posts %}
-      <div class="card" style="width: 18rem;">
-        <img
-          class="card-img-top"
-          src="{{ post.thumbnail }}"
-          alt="Card image cap"
-        />
-        <div class="card-body">
+      <div class="card bg-dark text-white">
+        <img class="card-img" src="{{ post.thumbnail }}" alt="Card image" />
+        <div class="card-image-overlay">
           <h5 class="card-title">{{ post.title }}</h5>
           <p class="card-text">{{ post.excerpt }}</p>
           <a
