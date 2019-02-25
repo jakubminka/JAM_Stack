@@ -10,7 +10,7 @@ pagination:
 <section id="posts" class="py-5">
   <div class="container">
     <div class="row">
-      {% for post in site.posts %}
+      {% for post in paginator.posts %}
       <div class="card" style="width: 18rem;">
         <img
           class="card-img-top"
