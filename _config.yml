@@ -6,7 +6,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Jihočeské univerzity v Českých Budějovicích Jakuba Minky na téma moderní technologie
   pro vývoj webu JAM Stack
 baseurl: ""
-url: "https://zen-torvalds-384b19.netlify.com"
+url: "https://zen-torvalds-384b19.netlify.com/"
 github_username: jakubminka
 footer: JAM Stack
 
