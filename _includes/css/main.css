@@ -3,3 +3,7 @@
   background-position: center;
   background-image: url("{{ page.thumbnail }}");
 }
+
+#colorBrand {
+  color: "#1976a8";
+}
