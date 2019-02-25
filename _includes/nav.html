@@ -17,7 +17,7 @@
     {% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
     {% for p in navigation_pages %}
       {% if p.navigation_weight %}
-      <li {% if p.url == page.url %}class="nav-item active"{% else %}class="nav-item"{% endif %}><a href="{{ p.url }}" class="nav-link">
+      <li {% if p.url == page.url %}class="nav-item active"{% else %}class="nav-item"{% endif %} onmouseover="zvetsiText()" onmouseout="zmensiText()" id="navItem"><a href="{{ p.url }}" class="nav-link">
         {{ p.title }}
       </a></li>
       <li class="hidden"><a href="#page-top"></a></li>
