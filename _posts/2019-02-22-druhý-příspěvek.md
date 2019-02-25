@@ -8,6 +8,7 @@ thumbnail: /images/uploads/tunnel-2033983_1280.jpg
 categories: blog
 comments: true
 ---
+
 Toto je druhý příspěvek
 
 Je tu i příklad _kurzívy_, **tučného písma**
@@ -20,8 +21,8 @@ Je tu i příklad _kurzívy_, **tučného písma**
 Toto je kód
 ```
 
-* Položka 1
-* Položka 2
-  * Položka 2.1
-  * Položka 2.2
-    * Položka 2.2.2
+- Položka 1
+- Položka 2
+  - Položka 2.1
+  - Položka 2.2
+    - Položka 2.2.2
