@@ -29,6 +29,10 @@ color:
 # ALGOLIA NASTAVENÍ
 algolia:
   application_id: "PDMQTM8G33"
+
+# PAGINATE PLUGIN
+paginate: 5
+paginate_path: "/posts/page:num/"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
