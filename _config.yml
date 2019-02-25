@@ -17,6 +17,8 @@ plugins:
   - jekyll-feed
   - jekyll-paginate-v2
 
+gems: [jekyll-paginate-v2]
+
 permalink: pretty
 sass:
   sass_dir: _sass
@@ -32,7 +34,8 @@ algolia:
   application_id: "PDMQTM8G33"
 
 # PAGINATE PLUGIN
-paginate: 5
+pagination:
+  per_page: 5
 # paginate_path: "/posts/page:num/"
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
