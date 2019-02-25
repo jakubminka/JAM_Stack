@@ -38,8 +38,8 @@ pagination:
   debug: false
   collection: "posts"
   per_page: 5
-  permalink: "/page/:num.md"
-  title: ":title - page :num"
+  permalink: "/page/:num"
+  title: title: ':title - page :num of :max'
   limit: 0
   sort_field: "date"
   sort_reverse: true
