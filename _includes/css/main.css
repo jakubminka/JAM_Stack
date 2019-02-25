@@ -1,4 +1,5 @@
-.bg-apend img {
+.bg-apend {
   background-size: cover;
   background-position: center;
+  background-image: url("{{ page.thumbnail }}");
 }
