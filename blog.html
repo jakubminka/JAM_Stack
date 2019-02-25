@@ -11,21 +11,23 @@ pagination:
   <div class="container">
     <div class="row">
       {% for post in site.posts %}
-      <a href="{{ post.url | prepend: site.baseurl }}" class="btn btn-primary">
-        <div class="card" style="width: 18rem;">
-          <img
-            class="card-img-top"
-            src="{{ post.thumbnail }}"
-            alt="Card image cap"
-          />
-          <div class="card-body">
-            <h5 class="card-title">{{ post.title }}</h5>
-            <p class="card-text">{{ post.excerpt }}</p>
-            <a href="{{ post.url | prepend: site.baseurl }}" class="btn
+      <div class="card" style="width: 18rem;">
+        <img
+          class="card-img-top"
+          src="{{ post.thumbnail }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p class="card-text">{{ post.excerpt }}</p>
+          <a
+            href="{{ post.url | prepend: site.baseurl }}"
+            class="btn
             btn-primary"
-          </div>
+            >Více</a
+          >
         </div>
-      </a>
+      </div>
       {% endfor %}
     </div>
   </div>
