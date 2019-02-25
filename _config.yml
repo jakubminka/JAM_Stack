@@ -28,7 +28,9 @@ color:
 
 # ALGOLIA NASTAVENÍ
 algolia:
-  application_id: "PDMQTM8G33"
+  application_id: PDMQTM8G33
+  index_name: PDMQTM8G33
+  search_only_api_key: 4fbd50b80279fa3a1bb80d6c0f24472a
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
