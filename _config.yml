@@ -36,7 +36,7 @@ pagination:
   debug: false
   collection: "posts"
   per_page: 5
-  permalink: "/page/:num/"
+  permalink: "/page/:num.md"
   title: ":title - page :num"
   limit: 0
   sort_field: "date"
