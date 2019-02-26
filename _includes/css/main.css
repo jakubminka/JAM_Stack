@@ -88,3 +88,54 @@ main {
   border: 0 none;
   vertical-align: top;
 }
+
+main #add-button {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+}
+
+main .card {
+  margin: 30px;
+}
+
+.secondary-color {
+  background-color: #ff6ca1 !important;
+}
+
+.secondary-color * {
+  color: #000000 !important;
+}
+
+h5 {
+  font-weight: 300;
+}
+
+.btn-flat {
+  color: #7f91a9;
+}
+
+.btn-flat:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+input:focus:not([disabled]):not([readonly]) {
+  border-bottom-color: #52647a !important;
+}
+
+body.shopping-list-add .list-bottom-sheet {
+  z-index: 1007;
+  display: block;
+  bottom: 0px;
+  opacity: 1;
+  transition-property: bottom;
+  transition-duration: 0.75s;
+}
+
+body.shopping-list-add .modal-overlay {
+  display: block;
+  opacity: 0.5;
+  transition-property: all;
+  transition-duration: 0.25s;
+  z-index: 1006;
+}
