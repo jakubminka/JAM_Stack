@@ -57,150 +57,22 @@
   (function() {
     "use strict";
 
-    var ENTER_KEY = 13;
-    var newItemDom = document.getElementById("new-item");
-    var syncDom = document.getElementById("sync-wrapper");
-    var db = new PouchDB("my_database");
-    var remoteCouch =
-      "https://ce5bf160-0eb3-4bc5-b798-49e8cbaddaac-bluemix.cloudantnosqldb.appdomain.cloud";
+    var model = null;
 
-    db.changes({
-      since: "now",
-      live: true
-    }).on("change", showItems);
-
-    function addItem(text) {
-      var item = {
-        _id: new Date().toISOString(),
-        title: text,
-        completed: false
-      };
-      db.put(item, function callback(err, result) {
-        if (!err) {
-          console.log("Úspěšně přidáno!");
-        }
-      });
-    }
-    function showItems() {
-      db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
-        redrawItemsUI(doc.rows);
-      });
-    }
-
-    function checkboxChanged(item, event) {
-      item.completed = event.target.checked;
-      db.put(item);
-    }
-
-    function deleteButtonPressed(item) {
-      db.remove(item);
-    }
-
-    function itemBlurred(item, event) {
-      var trimmedText = event.target.value.trim();
-      if (!trimmedText) {
-        db.remove(item);
-      } else {
-        item.title = trimmedText;
-        db.put(item);
+    var database = function(themodel) {
+      if (themodel) {
+        themodel(function(err, response) {
+          if (err) {
+            console.error(err);
+          } else {
+            model = response;
+            console.log("Databáze připravena!");
+          }
+        });
       }
-    }
+      return this;
+    };
 
-    function sync() {
-      syncDom.setAttribute("data-sync-state", "syncing");
-      var opts = { live: true };
-      db.replicate.to(remoteCouch, opts, syncError);
-      db.replicate.from(remoteCouch, opts, syncError);
-    }
-
-    function syncError() {
-      syncDom.setAttribute("data-sync-state", "error");
-    }
-
-    function itemDblClicked(item) {
-      var div = document.getElementById("li_" + item._id);
-      var inputEditItem = document.getElementById("input_" + item._id);
-      div.className = "editing";
-      inputEditItem.focus();
-    }
-
-    function itemKeyPressed(item, event) {
-      if (event.keyCode === ENTER_KEY) {
-        var inputEditItem = document.getElementById("input_" + item._id);
-        inputEditItem.blur();
-      }
-    }
-
-    function createItemList(item) {
-      var checkbox = document.createElement("input");
-      checkbox.className = "toggle";
-      checkbox.type = "checkbox";
-      checkbox.addEventListener("change", checkboxChanged.bind(this, item));
-
-      var label = document.createElement("label");
-      label.appendChild(document.createTextNode(item.title));
-      label.addEventListener("dblclick", itemDblClicked.bind(this, item));
-
-      var deleteLink = document.createElement("button");
-      deleteLink.className = "destroy";
-      deleteLink.addEventListener(
-        "click",
-        deleteButtonPressed.bind(this, item)
-      );
-
-      var divDisplay = document.createElement("div");
-      divDisplay.className = "view";
-      divDisplay.appendChild(checkbox);
-      divDisplay.appendChild(label);
-      divDisplay.appendChild(deleteLink);
-
-      var inputEditItem = document.createElement("input");
-      inputEditItem.id = "input_" + item._id;
-      inputEditItem.className = "edit";
-      inputEditItem.value = item.title;
-      inputEditItem.addEventListener(
-        "keypress",
-        itemKeyPressed.bind(this, item)
-      );
-      inputEditItem.addEventListener("blur", itemBlurred.bind(this, item));
-
-      var li = document.createElement("li");
-      li.id = "li_" + item._id;
-      li.appendChild(divDisplay);
-      li.appendChild(inputEditItem);
-
-      if (item.completed) {
-        li.className += "complete";
-        checkbox.checked = true;
-      }
-
-      return li;
-    }
-
-    function redraItemsUI(items) {
-      var ul = document.getElementById("item-list");
-      ul.innerHTML = "";
-      items.forEach(function(item) {
-        ul.appendChild(createItemList(item.doc));
-      });
-    }
-
-    function newItemKeyPressHandler(event) {
-      if (event.keyCode === ENTER_KEY) {
-        addITem(newItemDom.value);
-        newItemDom.value = "";
-      }
-    }
-
-    function addEventListeners() {
-      newItemDom.addEventListener("keypress", newItemKeyPressHandler, false);
-    }
-
-    addEventListeners();
-    showItems();
-
-    if (remoteCouch) {
-      sync();
-    }
+    window.shopper = database;
   })();
 </script>
