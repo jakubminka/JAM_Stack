@@ -11,3 +11,32 @@ thumbnail: assets/images/slide1.png
 
   <ul id="shopping-list-items" class="collection"></ul>
 </main>
+
+<!-- add more stuff button -->
+<button id="add-button" class="btn-floating btn-large secondary-color right" onclick="shopper.openadd()">
+  <i class="material-icons">add</i>
+</button>
+
+</main>
+
+<!-- modal: add a shopping list form -->
+<div class="modal bottom-sheet list-bottom-sheet">
+<form id="shopping-list-add" class="col s12 white" onsubmit="shopper.add(event); return false">
+  <div class="modal-content">
+    <h5>Create a Shopping List</h5>
+    <div class="row">
+      <div class="input-field col s12">
+        <input name="title" type="text" class="validate" placeholder="Enter a title for the shopping list" required />
+      </div>
+      <input name="type" type="hidden" value="list">
+    </div>
+  </div>
+  <div class="modal-footer primary-color">
+    <button class="btn-flat" type="button" onclick="shopper.closeadd()">Cancel</button>
+    <button class="btn-flat" type="submit">Add</button>
+  </div>
+</form>
+</div>
+
+<!-- modal: overlay -->
+<div class="modal-overlay" onclick="shopper.closeadd()"></div>
