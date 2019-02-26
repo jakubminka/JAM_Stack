@@ -237,3 +237,40 @@
     }
   })(window);
 </script>
+
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBWLuvmNBh8uj6OniQKPzM0CqMj07pkQ4k",
+    authDomain: "jam-stack-11d47.firebaseapp.com",
+    databaseURL: "https://jam-stack-11d47.firebaseio.com",
+    projectId: "jam-stack-11d47",
+    storageBucket: "jam-stack-11d47.appspot.com",
+    messagingSenderId: "941799925603"
+  };
+  firebase.initializeApp(config);
+</script>
+
+<!-- Firebase App is always required and must be first -->
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+<!-- Add additional services that you want to use -->
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-messaging.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-functions.js"></script>
+
+<!-- Comment out (or don't include) services that you don't want to use -->
+<!--
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+-->
+
+<script>
+  var config = {
+    // ...
+  };
+  firebase.initializeApp(config);
+</script>
