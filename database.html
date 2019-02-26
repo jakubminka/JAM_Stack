@@ -6,3 +6,11 @@ navigation_weight: 6
 pagination:
   enabled: true
 ---
+
+<ul>
+  {% for poznamka in site.data.poznamky %}
+  <li>{{ poznamka.nazev }}</li>
+  <li>{{ poznmka.obsah }}</li>
+  <li>{{ poznamka.author }}</li>
+  {% endfor %}
+</ul>
