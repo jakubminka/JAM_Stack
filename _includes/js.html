@@ -55,4 +55,48 @@
 <script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 <script>
   var db = new PouchDB("my_database");
+  var remoteCouch =
+    "http://jakubminka:225427Airlive@https://zen-torvalds-384b19.netlify.com/my_database";
+
+  db.changes({
+    since: "now",
+    live: true
+  }).on("change", showItems);
+
+  function addItem(text) {
+    var item = {
+      _id: new Date().toISOString(),
+      title: text,
+      completed: false
+    };
+    db.put(item, function callback(err, result) {
+      if (!err) {
+        console.log("Úspěšně přidáno!");
+      }
+    });
+  }
+  function showItems() {
+    db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
+      redrawItemsUI(doc.rows);
+    });
+  }
+
+  function checkboxChanged(item, event) {
+    item.completed = event.target.checked;
+    db.put(item);
+  }
+
+  function deleteButtonPressed(item) {
+    db.remove(item);
+  }
+
+  function itemBlurred(item, event) {
+    var trimmedText = event.target.value.trim();
+    if (!trimmedText) {
+      db.remove(item);
+    } else {
+      item.title = trimmedText;
+      db.put(item);
+    }
+  }
 </script>
