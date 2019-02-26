@@ -58,7 +58,7 @@
     "use strict";
 
     var ENTER_KEY = 13;
-    var newTodoDom = document.getElementById("new-item");
+    var newItemDom = document.getElementById("new-item");
     var syncDom = document.getElementById("sync-wrapper");
     var db = new PouchDB("database");
     var remoteCouch =
@@ -124,7 +124,7 @@
       inputEditItem.focus();
     }
 
-    function todoKeyPressed(item, event) {
+    function itemKeyPressed(item, event) {
       if (event.keyCode === ENTER_KEY) {
         var inputEditItem = document.getElementById("input_" + item._id);
         inputEditItem.blur();
@@ -177,15 +177,15 @@
       return li;
     }
 
-    function redrawTodosUI(items) {
+    function redraItemsUI(items) {
       var ul = document.getElementById("item-list");
       ul.innerHTML = "";
-      todos.forEach(function(item) {
+      items.forEach(function(item) {
         ul.appendChild(createItemList(item.doc));
       });
     }
 
-    function newTodoKeyPressHandler(event) {
+    function newItemKeyPressHandler(event) {
       if (event.keyCode === ENTER_KEY) {
         addITem(newItemDom.value);
         newItemDom.value = "";
