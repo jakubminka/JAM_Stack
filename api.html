@@ -6,82 +6,105 @@ navigation_weight: 3
 ---
 
 <div class="container">
-  <div class="formBox">
-    <form
-      name="contact"
-      method="POST"
-      data-netlify-recaptcha="true"
-      data-netlify="true"
-    >
-      <div class="row">
-        <div class="col-sm-12"><h1>Kontaktní formulář</h1></div>
-      </div>
+  <div class="row">
+    <div class="formBox">
+      <form
+        name="contact"
+        method="POST"
+        data-netlify-recaptcha="true"
+        data-netlify="true"
+      >
+        <div class="row">
+          <div class="col-sm-12"><h1>Kontaktní formulář</h1></div>
+        </div>
 
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="inputBox">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="inputBox">
+              <input
+                type="text"
+                name="jmeno"
+                class="input"
+                placeholder="Jméno:"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="inputBox">
+              <input
+                type="text"
+                name="prijmeni"
+                class="input"
+                placeholder="Příjmení:"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="inputBox">
+              <input
+                type="text"
+                name="email"
+                class="input"
+                placeholder="Email:"
+              />
+            </div>
+          </div>
+
+          <div class="col-sm-6">
+            <div class="inputBox">
+              <input
+                type="text"
+                name="telefon"
+                class="input"
+                placeholder="Telefon:"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="inputBox">
+              <textarea
+                name="message"
+                class="input"
+                placeholder="Zpráva:"
+              ></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="row"><div data-netlify-recaptcha="true"></div></div>
+        <div class="row">
+          <div class="col-sm-12">
             <input
-              type="text"
-              name="jmeno"
-              class="input"
-              placeholder="Jméno:"
+              type="submit"
+              name=""
+              class="button"
+              value="Odeslat zprávu"
             />
           </div>
         </div>
-
-        <div class="col-sm-6">
-          <div class="inputBox">
-            <input
-              type="text"
-              name="prijmeni"
-              class="input"
-              placeholder="Příjmení:"
-            />
-          </div>
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <section id="itemdatabase">
+      <header id="header">
+        <h1>todos</h1>
+        <input id="new-item" placeholder="Jaké položky přidáte?" autofocus />
+      </header>
+      <section id="main"><ul id="item-list"></ul></section>
+      <footer id="footer">
+        <span id="item-count"></span>
+        <div id="sync-wrapper">
+          <div id="sync-success">Currently syncing</div>
+          <div id="sync-error">There was a problem syncing</div>
         </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-6">
-          <div class="inputBox">
-            <input
-              type="text"
-              name="email"
-              class="input"
-              placeholder="Email:"
-            />
-          </div>
-        </div>
-
-        <div class="col-sm-6">
-          <div class="inputBox">
-            <input
-              type="text"
-              name="telefon"
-              class="input"
-              placeholder="Telefon:"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-sm-12">
-          <div class="inputBox">
-            <textarea
-              name="message"
-              class="input"
-              placeholder="Zpráva:"
-            ></textarea>
-          </div>
-        </div>
-      </div>
-      <div class="row"><div data-netlify-recaptcha="true"></div></div>
-      <div class="row">
-        <div class="col-sm-12">
-          <input type="submit" name="" class="button" value="Odeslat zprávu" />
-        </div>
-      </div>
-    </form>
+      </footer>
+    </section>
   </div>
 </div>
