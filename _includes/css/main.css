@@ -139,3 +139,31 @@ body.shopping-list-add .modal-overlay {
   transition-duration: 0.25s;
   z-index: 1006;
 }
+
+.collapsible {
+  overflow-y: hidden;
+  margin: 0;
+  max-height: calc(100vh - 65px);
+  transition-property: all;
+  transition-duration: 0.55s;
+}
+
+.collapsible.closed {
+  max-height: 0;
+  transition-property: all;
+  transition-duration: 0.15s;
+}
+
+.card.collapsible {
+  transition-duration: 2s;
+}
+
+.list-edit .card-action {
+  border: 0 none;
+  padding: 0;
+  text-align: right;
+}
+
+.list-edit form {
+  margin: 15px;
+}

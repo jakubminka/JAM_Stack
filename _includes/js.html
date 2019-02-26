@@ -310,3 +310,11 @@
 </script>
 <script src="https://cdn.jsdelivr.net/npm/pouchdb@6.3.4/dist/pouchdb.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pouchdb@6.3.4/dist/pouchdb.find.min.js"></script>
+<script>
+  // remove from DOM node list
+  var removeFromList = function(id) {
+    var list = document.getElementById(sanitize(id));
+    shopper.toggle(list);
+    list.parentElement.removeChild(list);
+  };
+</script>
