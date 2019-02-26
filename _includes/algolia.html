@@ -40,20 +40,20 @@
     const content = hit._highlightResult.html.value;
 
     return `
-        <div class="post-item">
-          <span class="post-meta">${date}</span>
-          <h2><a class="post-link" href="${url}">${title}</a></h2>
-          {{#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>{{/breadcrumbs}}
-          <div class="post-snippet">${content}</div>
-        </div>
-      `;
+            <div class="post-item">
+              <span class="post-meta">${date}</span>
+              <h2><a class="post-link" href="${url}">${title}</a></h2>
+              {{#breadcrumbs}}<a href="${url}" class="post-breadcrumbs">${breadcrumbs}</a>{{/breadcrumbs}}
+              <div class="post-snippet">${content}</div>
+            </div>
+          `;
   };
 
   search.addWidget(
     instantsearch.widgets.searchBox({
       container: "#search-searchbar",
-      placeholder: "Search into posts...",
-      poweredBy: true // This is required if you're on the free Community plan
+      placeholder: "Hledat...",
+      poweredBy: true
     })
   );
 
@@ -101,5 +101,8 @@
   }
   .post-snippet img {
     display: none;
+  }
+  #search-searchbar {
+    height: 80px;
   }
 </style>
