@@ -781,6 +781,7 @@ h3 {
   height: 400px;
 }
 
-.nav-item a:hover {
-  color: #42bcf4;
+.overlay {
+  position: absolute;
+  z-index: 12;
 }

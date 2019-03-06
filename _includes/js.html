@@ -264,23 +264,3 @@
     });
   });
 </script>
-
-<!-- Recaptcha DOWNLOAD -->
-<script>
-  $(document).ready(function() {
-    $("download").submit(function() {
-      var response = grecaptcha.getResponse();
-      if (response.length == 0) {
-        alert("Stahování je zabezpečeno ReCaptchou");
-        return false;
-      }
-    });
-  });
-</script>
-<script type="text/javascript">
-  var onloadCallback = function() {
-    grecaptcha.render("html_element", {
-      sitekey: "6Lfz3JMUAAAAAPRuydKO5tQg5RWFvg2Ael4Cy7rm"
-    });
-  };
-</script>
