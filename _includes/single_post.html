@@ -4,7 +4,7 @@
   style="background-image: url('{{ post.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
 >
   {% else %}
-  {{ include banner.html }}
+    {% include banner.html %}
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
@@ -44,7 +44,7 @@
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.previous.title }}"
-            >&larr; Previous<span class="d-none d-md-inline"> Post</span></a
+            >&larr; Předchozí<span class="d-none d-md-inline"> Příspěvek</span></a
           >
           {% endif %} {% if page.next.url %}
           <a
@@ -53,7 +53,7 @@
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.next.title }}"
-            >Next<span class="d-none d-md-inline"> Post</span> &rarr;</a
+            >Další<span class="d-none d-md-inline"> příspěvek</span> &rarr;</a
           >
           {% endif %}
         </div>
