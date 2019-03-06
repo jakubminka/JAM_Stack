@@ -29,7 +29,7 @@ collections:
     fields:
       - { label: "Název", name: "title", widget: "string" }
       - { label: "Cena", name: "price", widget: "number" }
-      - { label: "ID, name:"id", widget: "hidden"}
+      - { label: "ID", name:"id", widget: "hidden" }
       - {
           label: "Layout",
           name: "layout",
