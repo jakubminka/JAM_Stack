@@ -9,31 +9,29 @@
       style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; height: 400px"
     >
       {% else %} {% include banner.html %}
-      <header>
-        {% endif %}
-        <div class="overlay"></div>
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-8 col-md-10 mx-auto">
-              <div class="post-heading">
-                <h1>{{ page.title }}</h1>
-                {% if page.subtitle %}
-                <h3 class="subheading">{{ page.subtitle }}</h3>
-                {% endif %}
-                <span class="meta"
-                  >Publikováno uživatelem
-                  <a href="#"
-                    >{% if page.author %}{{ page.author }}{% else %}{{
-                    site.author }}{% endif %}</a
-                  >
-                  on {{ page.date | date: '%B %d, %Y' }}</span
+      <header>{% endif %}</header>
+      <div class="overlay"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="post-heading">
+              <h1>{{ page.title }}</h1>
+              {% if page.subtitle %}
+              <h3 class="subheading">{{ page.subtitle }}</h3>
+              {% endif %}
+              <span class="meta"
+                >Publikováno uživatelem
+                <a href="#"
+                  >{% if page.author %}{{ page.author }}{% else %}{{ site.author
+                  }}{% endif %}</a
                 >
-                <hr />
-              </div>
+                on {{ page.date | date: '%B %d, %Y' }}</span
+              >
+              <hr />
             </div>
           </div>
         </div>
-      </header>
+      </div>
 
       <div class="container">
         <div class="row">
