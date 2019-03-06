@@ -35,6 +35,9 @@ algolia:
 # Kolekce eshopu
 collections:
   - products
+
+snipcart:
+  api_key: MmEwYTM4NzQtNDk4Ni00ODlkLWIyZTktNWQ0MjA0NWIxYWI5NjM2ODYyNzk5NDk4OTMzNTQz
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
