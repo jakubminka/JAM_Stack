@@ -12,7 +12,7 @@ navigation_weight: 6
       <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
         <div class="card align-items-center">
           <div class="view overlay">
-            <img src="{{ product.image }}" class="card-img-top" alt="" />
+            <img src="{{ product.thumbnail }}" class="card-img-top" alt="" />
             <a> <div class="mask rgba-white-slight"></div> </a>
           </div>
           <div class="card-body text-center">
@@ -24,7 +24,7 @@ navigation_weight: 6
                 <a
                   href="{{ product.url }}"
                   class="dark-grey-text"
-                  >{{ product.name }}</a
+                  >{{ product.title }}</a
                 >
               </strong>
             </h5>
@@ -33,9 +33,9 @@ navigation_weight: 6
             </h4>
             <button
               class="snipcart-add-item btn unique-color"
-              data-item-name="{{ product.name }}"
+              data-item-name="{{ product.title }}"
               data-item-id="{{ product.id }}"
-              data-item-image="{{ product.image }}"
+              data-item-image="{{ product.thumbnail }}"
               data-item-url="{{ product.url }}"
               data-item-price="{{ product.price }}"
             >
