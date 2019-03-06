@@ -4,7 +4,7 @@
   style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
 >
   {% else %}
-  <header class="masthead">
+  {{ include banner.html }}
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
