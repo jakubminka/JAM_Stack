@@ -3,8 +3,8 @@
   class="masthead"
   style="background-image: url('{{ post.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
 >
-  {% else %}
-    {% include banner.html %}
+  {% else %} {% include banner.html %}
+  <header>
     {% endif %}
     <div class="overlay"></div>
     <div class="container">
@@ -44,7 +44,9 @@
             data-toggle="tooltip"
             data-placement="top"
             title="{{ page.previous.title }}"
-            >&larr; Předchozí<span class="d-none d-md-inline"> Příspěvek</span></a
+            >&larr; Předchozí<span class="d-none d-md-inline">
+              Příspěvek</span
+            ></a
           >
           {% endif %} {% if page.next.url %}
           <a
@@ -60,7 +62,7 @@
       </div>
     </div>
   </div>
-<br>
+  <br />
   <div class="container">
     {% if page.comments %}
     <div id="disqus_thread"></div>
