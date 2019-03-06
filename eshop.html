@@ -5,4 +5,53 @@ permalink: /eshop/
 navigation_weight: 6
 ---
 
-{% for product in site.products %}{% include product.html %}{% endfor %}
+<section class="text-center my-5">
+  <div class="container">
+    <div class="row">
+      {% for product in site.products %}
+      <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
+        <div class="card align-items-center">
+          <div class="view overlay">
+            <img src="{{ product.image }}" class="card-img-top" alt="" />
+            <a> <div class="mask rgba-white-slight"></div> </a>
+          </div>
+          <div class="card-body text-center">
+            <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
+              ><h5>{{ product.category }}</h5></a
+            >
+            <h5>
+              <strong>
+                <a
+                  href="{{ site.baseurl }}{{product.url}}"
+                  class="dark-grey-text"
+                  >{{ product.name }}</a
+                >
+              </strong>
+            </h5>
+            <h4 class="font-weight-bold blue-text">
+              <strong>{{ product.price }}</strong>
+            </h4>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--
+          <button
+            class="snipcart-add-item"
+            data-item-name="{{ product.name }}"
+            data-item-id="{{ product.sku }}"
+            data-item-image="{{ product.image }}"
+            data-item-url="{{ site.baseurl }}"
+            data-item-price="{{ product.price }}"
+          >
+            Buy it for {{ product.price }} $
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+-->
