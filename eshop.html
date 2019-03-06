@@ -24,8 +24,7 @@ navigation_weight: 6
                 <a
                   href="{{ product.url }}"
                   class="dark-grey-text"
-                  data-toggle="modal"
-                  data-target="#infoProdukt"
+                  id="produktID"
                   >{{ product.title }}</a
                 >
               </strong>
@@ -51,43 +50,7 @@ navigation_weight: 6
   </div>
 </section>
 
-<div
-  class="modal fade"
-  id="infoProdukt"
-  tabindex="-1"
-  role="dialog"
-  aria-labelledby="infoProduktTitulek"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-notify modal-info" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h2 class="heading lead text-dark" id="infoProduktTitulek">
-          {{ include.title }}
-        </h2>
-        <button
-          type="button"
-          class="close"
-          data-dismiss="modal"
-          aria-label="Zavřít"
-        >
-          <span aria-hidden="true" class="white-text">&times;</span>
-        </button>
-      </div>
-
-      <div class="modal-body">
-        <div class="text-center"><p>{{ product.excerpt }}</p></div>
-      </div>
-
-      <div class="modal-footer justify-content-center">
-        <a type="button" class="btn btn-primary text-dark">Zakoupit</a>
-        <a
-          type="button"
-          class="btn btn-outline-primary waves-effect"
-          data-dismiss="modal"
-          >Zavřít</a
-        >
-      </div>
-    </div>
-  </div>
+<div id="modal" class="modal">
+  <div class="modal-content"><span class="close">&times;</span></div>
+  <p></p>
 </div>
