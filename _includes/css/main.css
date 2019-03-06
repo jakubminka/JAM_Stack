@@ -780,8 +780,3 @@ h3 {
 #map {
   height: 400px;
 }
-
-.overlay {
-  position: absolute;
-  z-index: 12;
-}
