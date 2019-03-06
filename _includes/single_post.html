@@ -1,7 +1,7 @@
-{% if page.background %}
+{% if post.thumbnail %}
 <header
   class="masthead"
-  style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
+  style="background-image: url('{{ post.thumbnail | prepend: site.baseurl | replace: '//', '/' }}')"
 >
   {% else %}
   {{ include banner.html }}
