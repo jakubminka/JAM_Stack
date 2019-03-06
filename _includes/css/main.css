@@ -823,3 +823,7 @@ h3 {
   text-decoration: none;
   cursor: pointer;
 }
+
+.masthead {
+  display: block;
+}
