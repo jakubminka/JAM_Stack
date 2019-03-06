@@ -44,6 +44,7 @@ pagination:
   in culpa qui officia deserunt mollit est laborum.
 </p>
 <div class="row d-flex justify-content-center">
+  {% for post in site.posts %}
   <div class="col-md-6 col-xl-5 mb-4">
     <div class="view overlay rounded z-depth-2">
       <img
@@ -68,5 +69,6 @@ pagination:
       >
     </div>
   </div>
+  {% endfor %}
 </div>
 {% include algolia.html %}
