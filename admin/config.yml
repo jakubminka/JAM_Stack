@@ -28,6 +28,8 @@ collections:
     create: true
     fields:
       - { label: "Název", name: "title", widget: "string" }
+      - { label: "Popis", name: "excerpt", widget: "text" }
+      - { label: "Obsah", name: "description", widget: "text" }
       - { label: "Cena", name: "price", widget: "number" }
       - { label: "ID", name: "id", widget: "number" }
       - {
