@@ -1,20 +1,19 @@
-<!-- SKRIPTY -->
+<!-- Jquery script -->
 <script
   src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
   integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
   crossorigin="anonymous"
 ></script>
-<script
-  src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-  crossorigin="anonymous"
-></script>
+
+<!-- PouchDB -->
+<script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
+
+<!-- Bootstrap script -->
 <script
   src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
-<script src="//cdn.jsdelivr.net/pouchdb/3.2.0/pouchdb.min.js"></script>
 
 <!-- Skript pro přihlášení do Netlify CMS -->
 <script>
@@ -29,10 +28,13 @@
   }
 </script>
 
+<!-- ReCaptcha -->
+<script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
+
 <!-- Skript widgetu pro přihlášení do Netlify CMS -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-Skript Google Maps API
+<!-- Skript Google Maps API -->
 <script>
   var map;
   function initMap() {
@@ -67,6 +69,7 @@ Skript Google Maps API
     document.getElementById("brandChange").style.fontSize = "";
   }
 </script>
+
 <script src="/assets/js/shoppinglist.js"></script>
 <script src="/aasets/js/shoppinglist.model.js"></script>
 <script>
@@ -77,11 +80,8 @@ Skript Google Maps API
     var newTodoDom = document.getElementById("new-todo");
     var syncDom = document.getElementById("sync-wrapper");
 
-    // EDITING STARTS HERE (you dont need to edit anything above this line)
-
     var db = new PouchDB("todos");
 
-    // Replace with remote instance, this just replicates to another local instance.
     var remoteCouch = "todos_remote";
 
     db.changes({
@@ -89,7 +89,6 @@ Skript Google Maps API
       live: true
     }).on("change", showTodos);
 
-    // We have to create a new todo document and enter it in the database
     function addTodo(text) {
       var todo = {
         _id: new Date().toISOString(),
