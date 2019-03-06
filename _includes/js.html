@@ -5,7 +5,7 @@
   crossorigin="anonymous"
 ></script>
 
-<!-- PouchDB -->
+<!-- Script databáze PouchDB -->
 <script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 
 <!-- Bootstrap script -->
@@ -15,7 +15,7 @@
   crossorigin="anonymous"
 ></script>
 
-<!-- Skript pro přihlášení do Netlify CMS -->
+<!-- Script pro přihlášení do Netlify CMS -->
 <script>
   if (window.netlifyIdentity) {
     window.netlifyIdentity.on("init", user => {
@@ -28,13 +28,13 @@
   }
 </script>
 
-<!-- ReCaptcha -->
+<!-- Script ReCaptcha -->
 <script src="https://www.google.com/recaptcha/api.js?render=explicit"></script>
 
-<!-- Skript widgetu pro přihlášení do Netlify CMS -->
+<!-- Script widgetu pro přihlášení do Netlify CMS -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<!-- Skript Google Maps API -->
+<!-- Script Google Maps API -->
 <script>
   var map;
   function initMap() {
@@ -50,7 +50,7 @@
   defer
 ></script>
 
-<!-- Vlastní skripty -->
+<!-- Vlastní scripty -->
 <script>
   function brandOver() {
     document.getElementById("brandChange").style.color = "white";
@@ -266,7 +266,7 @@
 </script>
 
 <!-- Recaptcha DOWNLOAD -->
-<<script>
+<script>
   $(document).ready(function() {
     $("download").submit(function() {
       var response = grecaptcha.getResponse();
