@@ -27,13 +27,14 @@ collections:
     folder: "_products"
     create: true
     fields:
+      - { label: "Název", name: "title", widget: "string" }
+      - { label: "Cena", name: "price", widget: "number" }
+      - { label: "ID, name:"id", widget: "hidden"}
       - {
           label: "Layout",
           name: "layout",
           widget: "hidden",
           default: "detailProduktu",
         }
-      - { label: "Název", name: "title", widget: "string" }
-      - { label: "Cena", name: "price", widget: "number" }
       - { label: "Obrázek", name: "thumbnail", widget: "image" }
       - { label: "Kategorie", name: "categories", widget: "string" }
