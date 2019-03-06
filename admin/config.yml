@@ -22,3 +22,18 @@ collections:
       - { label: "Kategorie", name: "categories", widget: "string" }
       - { label: "Komenty", name: "comments", widget: "boolean" }
       - { label: "Text", name: "body", widget: "markdown" }
+  - name: "produkt"
+    label: "Produkt"
+    folder: "_products"
+    create: true
+    fields:
+      - {
+          label: "Layout",
+          name: "layout",
+          widget: "hidden",
+          default: "detailProduktu",
+        }
+      - { label: "Název", name: "name", widget: "string" }
+      - { label: "Cena", name: "price", widget: "number" }
+      - { label: "Obrázek", name: "image", widget: "image" }
+      - { label: "Kategorie", name: "category", widget: "string" }
