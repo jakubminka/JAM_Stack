@@ -2,6 +2,10 @@ a {
   color: #3f729b;
 }
 
+a:hover {
+  color: #1c2a48;
+}
+
 .card-img-top img {
   max-width: 230px;
   max-height: 95px;
