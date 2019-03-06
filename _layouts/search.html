@@ -11,7 +11,7 @@ layout: page
 
     <div class="post-list" id="search-hits">
       {% for post in site.posts %}
-      <div class="post-item">
+      <div class="post-item" style="background-color: black">
         {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
         %} <span class="post-meta">{{ post.date | date: date_format }}</span>
 
@@ -23,7 +23,6 @@ layout: page
         <img src="{{ post.background }}" style="height: 50px; width: 70px;" />
         <div class="post-snippet">{{ post.excerpt }}</div>
       </div>
-      <hr />
       {% endfor %}
     </div>
     {% include algolia.html %}
