@@ -31,6 +31,22 @@
 <!-- Skript widgetu pro přihlášení do Netlify CMS -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
+<!-- Skript Google Maps API -->
+<script>
+  var map;
+  function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      center: { lat: 48.973911, lng: 14.47502 },
+      zoom: 8
+    });
+  }
+</script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBf2su8m10fiXDnNxA6FaMzwe5cjcm1mbM&callback=initMap"
+  async
+  defer
+></script>
+
 <!-- Vlastní skripty -->
 <script>
   function brandOver() {
