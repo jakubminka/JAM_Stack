@@ -4,7 +4,7 @@ title: Třetí příspěvek
 excerpt: Toto je třetí příspěvek
 author: Jakub Minka
 date: 2019-02-25T18:40:14.530Z
-thumbnail: /images/uploads/flat-1295685_1280.png
+thumbnail: /images/uploads/dunes-4033821_1920.jpg
 categories: blog
 comments: true
 ---
