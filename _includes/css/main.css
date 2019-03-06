@@ -780,3 +780,7 @@ h3 {
 #map {
   height: 400px;
 }
+
+.nav-link:hover {
+  color: #42bcf4;
+}
