@@ -6,7 +6,7 @@
     {% include nav.html %} {% if page.background %}
     <header
       class="masthead"
-      style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}')"
+      style="background-image: url('{{ page.background | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover;"
     >
       {% else %} {% include banner.html %}
       <header>
