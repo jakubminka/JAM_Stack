@@ -18,7 +18,7 @@ collections:
       - { label: "Popis", name: "excerpt", widget: "string" }
       - { label: "Author", name: "author", widget: "string" }
       - { label: "Datum publikování", name: "date", widget: "datetime" }
-      - { label: "Ilustrační obrázek", name: "thumbnail", widget: "image" }
+      - { label: "Ilustrační obrázek", name: "background", widget: "image" }
       - { label: "Kategorie", name: "categories", widget: "string" }
       - { label: "Komenty", name: "comments", widget: "boolean" }
       - { label: "Text", name: "body", widget: "markdown" }
