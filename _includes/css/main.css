@@ -781,6 +781,6 @@ h3 {
   height: 400px;
 }
 
-.nav-link:hover {
+.nav-item a:hover {
   color: #42bcf4;
 }
