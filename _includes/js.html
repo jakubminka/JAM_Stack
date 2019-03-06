@@ -261,3 +261,21 @@
     }
   })(window);
 </script>
+
+<script>
+  $("#zapierAPI").submit(function(e) {
+    e.preventDefault();
+    $.ajax({
+      url: "https://hooks.zapier.com/hooks/catch/4380317/pv69p4/",
+      type: "post",
+      data: $("#zapierAPI").serialize(),
+      success: function(data) {
+        $("form").trigger("reset");
+        $("#success_message").fadeIn().html(data);
+        setTimeOut(function({
+          $("#success_message").fadeOut('slow');
+        }, 2000);
+      }
+    });
+  });
+</script>
