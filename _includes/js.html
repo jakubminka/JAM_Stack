@@ -265,3 +265,23 @@ Skript Google Maps API
     });
   });
 </script>
+
+<!-- Recaptcha DOWNLOAD -->
+<script>
+  $(document).ready(function() {
+    $("form").submit(function() {
+      var response = grecaptcha.getResponse();
+      if (response.length == 0) {
+        alert("Please check the Captcha");
+        return false;
+      }
+    });
+  });
+</script>
+<script>
+  var onloadCallback = function() {
+    grecaptcha.render("html_element", {
+      sitekey: "6Lfz3JMUAAAAAPRuydKO5tQg5RWFvg2Ael4Cy7rm"
+    });
+  };
+</script>
