@@ -4,7 +4,7 @@ title: Druhý příspěvek
 excerpt: Toto je druhý příspěvek
 author: Jakub Minka
 date: 2019-02-22T16:46:36.894Z
-thumbnail: /images/uploads/tunnel-2033983_1280.jpg
+thumbnail: /images/uploads/pacific-4031582_1920.jpg
 categories: blog
 comments: true
 ---
