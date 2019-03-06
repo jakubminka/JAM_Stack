@@ -78,6 +78,24 @@
   }
 </script>
 
+<script>
+  var modal = document.getElementById("modal");
+  var click = document.getElementById("produktID");
+  var close = document.getElementByClassName("close")[0];
+  click.onclick = function() {
+    modal.style.display = "block";
+  };
+
+  close.onclick = function() {
+    modal.style.display = "none";
+  };
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+</script>
+
 <!-- Nákupní list - ukázková databáze s použitím PouchDB -->
 <script src="/assets/js/shoppinglist.js"></script>
 <script src="/aasets/js/shoppinglist.model.js"></script>
@@ -272,19 +290,4 @@
       data: $("#zapierAPI").serialize()
     });
   });
-</script>
-
-<script type="text/javascript">
-  var modal = document.getElementById("produktID");
-  var modal = document.getElementById("modal");
-  var span = document.getElementById("close")[0];
-  btn.onclick = function() {
-    modal.style.display = "none";
-  };
-
-  window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
 </script>
