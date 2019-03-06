@@ -8,6 +8,5 @@ thumbnail: /images/uploads/fruits-4033340_1920.jpg
 categories: aktuality
 comments: true
 ---
-# Čtvrtý příspěvek
 
 Toto je čtvrtý příspěvek v aktualitách
