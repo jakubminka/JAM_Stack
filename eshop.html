@@ -31,6 +31,17 @@ navigation_weight: 6
             <h4 class="font-weight-bold blue-text">
               <strong>{{ product.price }}</strong>
             </h4>
+            <button
+              class="snipcart-add-item"
+              data-item-name="{{ product.name }}"
+              data-item-id="{{ product.id }}"
+              data-item-image="{{ product.image }}"
+              data-item-url="{{ site.baseurl }}"
+              data-item-price="{{ product.price }}"
+              data-item-category="{{product.category}}"
+            >
+              Koupit za {{ product.price }} $
+            </button>
           </div>
         </div>
       </div>
