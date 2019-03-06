@@ -32,24 +32,24 @@
 <!-- Skript widgetu pro přihlášení do Netlify CMS -->
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
-<!-- Skript Google Maps API -->
-<script>
-  var map;
-  var location = { lat: 48.973911, lng: 14.47502 };
-  var marker;
-  function initMap() {
-    map = new google.maps.Map(document.getElementById("map"), {
-      center: { lat: 48.973911, lng: 14.47502 },
-      zoom: 10
-    });
-  }
-</script>
 <!--
-  marker = new google.maps.Marker({
-    position: location,
-    map: map,
-    draggable: true;
-  })
+  Skript Google Maps API
+  <script>
+    var map;
+    var location = { lat: 48.973911, lng: 14.47502 };
+    var marker;
+    function initMap() {
+      map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: 48.973911, lng: 14.47502 },
+        zoom: 10
+      });
+    }
+  </script>
+    marker = new google.maps.Marker({
+      position: location,
+      map: map,
+      draggable: true;
+    })
 -->
 <script
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTjhUHTwh5cEeZziPWxcD2NRt3BEfZPQk&callback=initMap"
