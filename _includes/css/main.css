@@ -108,11 +108,11 @@ main {
   font-style: italic;
   color: #a9a9a9;
 }
-#header {
+#headerToDo {
   padding-top: 15px;
   border-radius: inherit;
 }
-#header:before {
+#headerToDo:before {
   content: "";
   position: absolute;
   top: 0;
@@ -121,8 +121,43 @@ main {
   height: 15px;
   z-index: 2;
   border-bottom: 1px solid #6c615c;
-  background: {{ site.color.myBlue }};
-
+  background: #8d7d77;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(132, 110, 100, 0.8)),
+    to(rgba(101, 84, 76, 0.8))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(132, 110, 100, 0.8),
+    rgba(101, 84, 76, 0.8)
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgba(132, 110, 100, 0.8),
+    rgba(101, 84, 76, 0.8)
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(132, 110, 100, 0.8),
+    rgba(101, 84, 76, 0.8)
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(132, 110, 100, 0.8),
+    rgba(101, 84, 76, 0.8)
+  );
+  background: linear-gradient(
+    top,
+    rgba(132, 110, 100, 0.8),
+    rgba(101, 84, 76, 0.8)
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
+  border-top-left-radius: 1px;
+  border-top-right-radius: 1px;
+}
 #new-todo,
 .edit {
   position: relative;
@@ -731,8 +766,4 @@ h5 {
 
 .myBlue {
   color: {{ site.color.myBlue }};
-}
-
-.hello {
-  color: blue;
 }
