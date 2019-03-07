@@ -8,7 +8,8 @@ a:hover {
 .nav-link a {
   text-transform: uppercase;
 }
-.active {
+.active,
+.active a {
   background-color: transparent !important;
 }
 .text-nowrap {
