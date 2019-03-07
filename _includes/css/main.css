@@ -6,6 +6,11 @@ a:hover {
   color: #1c2a48;
 }
 
+/* Definice stylu pro mojí vlastní barvu */
+.myBlue {
+  color: {{ site.color.myBlue }};
+}
+
 main {
   display: flex;
   margin: 0 auto 75px auto;
@@ -787,11 +792,6 @@ h3 {
   background: #fff;
   width: 20%;
   margin: 0 40% 0 40%;
-}
-
-/* Definice stylu pro mojí vlastní barvu */
-.myBlue {
-  color: {{ site.color.myBlue }};
 }
 
 .btn-login, .download-form {
