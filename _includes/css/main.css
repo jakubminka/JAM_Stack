@@ -451,10 +451,6 @@ label[for="toggle-all"] {
   color: inherit;
 }
 
-/*
-  Hack to remove background from Mobile Safari.
-  Can't use it globally since it destroys checkboxes in Firefox and Opera
-*/
 @media screen and (-webkit-min-device-pixel-ratio: 0) {
   #toggle-all,
   #todo-list li .toggle {
@@ -849,4 +845,8 @@ h3 {
 
 .myBlue {
   color: {{ site.color.myBlue }};
+}
+
+.btn-login, .download-form {
+
 }
