@@ -5,11 +5,11 @@ a:hover {
   color: #1c2a48;
 }
 
-.active a {
+.nav-item a {
 	padding: 0 0 10px;
 }
 
-.active a::after {
+.nav-item a::after {
 	position: absolute;
 	top: 100%;
 	left: 0;
@@ -26,8 +26,8 @@ a:hover {
 	transform: translateY(-10px);
 }
 
-.active a:hover::after,
-.active a:focus::after {
+.nav-item a:hover::after,
+.nav-item a:focus::after {
 	height: 5px;
 	opacity: 1;
 	-webkit-transform: translateY(0px);
