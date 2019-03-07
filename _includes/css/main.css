@@ -9,16 +9,16 @@ a:hover {
   background-color: #3F729B !important;
   color: white !important;
 }
-.active:hover{
+.active:hover {
   background-color: #1C2331 !important;
   color: white !important;
 }
 .nav-item:hover {
-  background-color: #1C2331;
-  color: #fff;
+  background-color: #3F729B;
+  color: #1C2331;
 }
 .nav-item a:hover {
-  color: #fff !important;
+  color: #1C2331 !important;
   cursor: pointer;
 }
 
