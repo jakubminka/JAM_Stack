@@ -11,7 +11,7 @@ a:hover {
 .active,
 .active a {
   background-color: transparent !important;
-  outline: 1px solid #fff;
+  border-bottom: 1px solid #fff;
 }
 .text-nowrap {
     white-space: nowrap !important;
