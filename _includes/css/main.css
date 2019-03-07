@@ -839,10 +839,10 @@ h3 {
 
 */ .hr-light {
   border-top: 3px solid #fff;
-  width: 20%;
+  width: 40px;
   margin: 0 40% 0 40%;
 }
 
 .myBlue {
-  color: {{ site.color.myBlue }}
+  color: {{ site.color.myBlue }};
 }
