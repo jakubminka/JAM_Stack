@@ -850,3 +850,9 @@ h3 {
 .myBlue {
   color: {{ site.color.myBlue }};
 }
+
+.parent {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
