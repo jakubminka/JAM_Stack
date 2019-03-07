@@ -60,7 +60,7 @@ a:hover {
 
 .bg-apend {
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-image: url("{{ page.thumbnail }}");
 }
 
