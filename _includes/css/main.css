@@ -5,6 +5,10 @@ a:hover {
   color: #1c2a48;
 }
 
+.nav-item:active {
+  background-color: #3F729B !important;
+  color: white !important;
+}
 .nav-item:hover {
   background-color: #3F729B;
   opacity: 0.5;
@@ -13,6 +17,7 @@ a:hover {
   color: {{ site.color.myBlue }} !important;
   cursor: pointer;
 }
+
 
 .card-img-top img {
   max-width: 230px;
