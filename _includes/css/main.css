@@ -15,7 +15,8 @@ a:hover {
   -webkit-transition:.5s;
   transition:.5s;
 }
-.active:hover {
+.active:hover,
+.active a:hover {
   background-color: #1C2331 !important;
   color: white !important;
   -o-transition:.5s;
@@ -24,15 +25,8 @@ a:hover {
   -webkit-transition:.5s;
   transition:.5s;
 }
-.nav-item:hover {
-  background-color: #3F729B;
-  color: #1C2331;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
-}
+
+.nav-item:hover,
 .nav-item a:hover {
   color: #1C2331 !important;
   cursor: pointer;
