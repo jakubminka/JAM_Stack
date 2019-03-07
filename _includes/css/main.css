@@ -859,6 +859,8 @@ h5 {
 }
 
 .hr-light {
-  border-top: 3px solid #fff;
+  height: 1px;
   width: 80px;
+  color: #fff;
+  margin: 0 40% 0 40%;
 }
