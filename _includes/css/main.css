@@ -12,7 +12,7 @@ a:hover {
   border-bottom-style: none !important;
   font-weight: 800;
 }
-.nav-link a {
+.nav-item a {
   text-transform: uppercase !important;
 }
 .active,
