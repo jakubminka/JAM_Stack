@@ -5,13 +5,13 @@ a:hover {
   color: #1c2a48;
 }
 
-.cl-effect-5 a {
+.nav-item a {
 	overflow: hidden;
 	padding: 0 4px;
 	height: 1em;
 }
 
-.cl-effect-5 a span {
+.nav-item a span {
 	position: relative;
 	display: inline-block;
 	-webkit-transition: -webkit-transform 0.3s;
@@ -19,7 +19,7 @@ a:hover {
 	transition: transform 0.3s;
 }
 
-.cl-effect-5 a span::before {
+.nav-item a span::before {
 	position: absolute;
 	top: 100%;
 	content: attr(data-hover);
@@ -29,8 +29,8 @@ a:hover {
 	transform: translate3d(0,0,0);
 }
 
-.cl-effect-5 a:hover span,
-.cl-effect-5 a:focus span {
+.nav-item a:hover span,
+.nav-item a:focus span {
 	-webkit-transform: translateY(-100%);
 	-moz-transform: translateY(-100%);
 	transform: translateY(-100%);
