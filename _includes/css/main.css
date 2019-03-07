@@ -4,6 +4,27 @@ a {
 a:hover {
   color: #1c2a48;
 }
+button {
+  font-family: 'Hind Guntur', sans-serif;
+  font-size: 15px;
+  line-height: 1;
+  color: #fff;
+  letter-spacing: 0.025em;
+
+  background: #379aff;
+  padding: 18px 0 11px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 2px;
+  min-width: 120px;
+  overflow: hidden;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 button:after,
 button:before {
   padding: 18px 0 11px;
@@ -40,6 +61,8 @@ button:hover:before {
   left: calc(0% - 10px);
   transition: left 1s cubic-bezier(0.86, 0, 0.07, 1);
 }
+
+
 .navbar .navbar-collapse {
   text-align: center !important;
 }
