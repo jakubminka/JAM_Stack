@@ -736,5 +736,5 @@ h5 {
 }
 
 .myBlueBg {
-  backgroung-color: {{ site.color.myBlue }} !important;
+  background-color: {{ site.color.myBlue }} !important;
 }
