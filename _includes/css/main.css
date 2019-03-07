@@ -1,5 +1,5 @@
 a {
-  color: {{ site.color.myBlue }} !important;
+  color: {{ site.color.myBlue }};
 }
 a:hover {
   color: #1c2a48;
