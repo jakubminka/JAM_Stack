@@ -14,7 +14,10 @@ layout: page
         %} <span class="post-meta">{{ post.date | date: date_format }}</span>
 
         <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}"
+          <a
+            class="post-link"
+            href="{{ post.url | relative_url }}"
+            style="color: #3F729B"
             >{{ post.title | escape }}</a
           >
         </h3>
