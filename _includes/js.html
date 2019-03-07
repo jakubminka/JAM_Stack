@@ -64,7 +64,8 @@
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTjhUHTwh5cEeZziPWxcD2NRt3BEfZPQk&callback=initMap"
   async
   defer
->
+></script>
+<script>
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -86,7 +87,7 @@
 <script>
   function brandOver() {
     document.getElementById("brandChange").style.color = "white";
-    document.getElementById("colorBrand").style.color = "#42bcf4";
+    document.getElementById("colorBrand").style.color = "{{ site.color.blue }}";
   }
   function brandOut() {
     document.getElementById("brandChange").style.color = "white";
