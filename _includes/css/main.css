@@ -9,8 +9,8 @@ a:hover {
   text-align: center !important;
 }
 .navbar .navbar-collapse .active a {
-  border-bottom: 1px solid #fff;
-  border-bottom-width: thin;
+  border-bottom: 0px !important;
+  font-weight: 800;
 }
 .nav-link a {
   text-transform: uppercase !important;
