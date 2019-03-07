@@ -773,19 +773,22 @@ h3 {
 .masthead {
   display: block;
 }
-/* Required for full background image */
+
+header {
+  height: 100vh;
+}
 
 .view {
 height: 400px;
 }
 
 @media (max-width: 740px) {
-html,
-body,
-header,
-.view {
-height: 100vh;
-}
+  html,
+  body,
+  header,
+  .view {
+    height: 100vh;
+  }
 }
 
 .top-nav-collapse {
