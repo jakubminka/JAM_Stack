@@ -9,8 +9,9 @@ layout: page
     <div class="post-list" id="search-hits">
       {% for post in site.posts %}
       <div class="post-item">
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
-        %} <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {% assign date_format = site.minima.date_format | default: "%-d %B %Y"
+        %}
+        <strong class="post-meta">{{ post.date | date: date_format }}</strong>
         <h3 style="color: #3F729B">
           <a
             class="post-link"
