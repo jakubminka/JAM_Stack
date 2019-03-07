@@ -8,11 +8,11 @@ a:hover {
 .active {
   background-color: #3F729B !important;
   color: white !important;
+  text-transform: uppercase;
   -o-transition:.5s;
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  /* ...and now for the proper property */
   transition:.5s;
 }
 .active:hover {
@@ -22,7 +22,6 @@ a:hover {
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  /* ...and now for the proper property */
   transition:.5s;
 }
 .nav-item:hover {
@@ -32,7 +31,6 @@ a:hover {
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  /* ...and now for the proper property */
   transition:.5s;
 }
 .nav-item a:hover {
@@ -42,7 +40,6 @@ a:hover {
   -ms-transition:.5s;
   -moz-transition:.5s;
   -webkit-transition:.5s;
-  /* ...and now for the proper property */
   transition:.5s;
 }
 
