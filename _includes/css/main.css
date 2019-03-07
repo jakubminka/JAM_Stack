@@ -9,7 +9,7 @@ a:hover {
   text-align: center !important;
 }
 .navbar .navbar-collapse .active a {
-  border-bottom: 0px !important;
+  border-bottom-style: none !important;
   font-weight: 800;
 }
 .nav-link a {
