@@ -837,14 +837,13 @@ h3 {
   }
 }
 
-*/ .hr-light {
+.hr-light {
   height: 1px;
   float: left;
   border: 0px;
   color: #fff;
   background: #fff;
   width: 40px;
-  margin: 0 40% 0 40%;
 }
 
 .myBlue {
