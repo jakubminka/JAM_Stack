@@ -827,30 +827,17 @@ h3 {
 .masthead {
   display: block;
 }
-/*
-html,
-body,
 .view {
   height: 100%;
 }
 
 @media (max-width: 740px) {
-  html,
-  body,
   .view {
     height: 100vh;
   }
 }
 
-h1 {
-  letter-spacing: 8px;
-}
-
-h5 {
-  letter-spacing: 3px;
-}
-*/
-.hr-light {
+*/ .hr-light {
   border-top: 3px solid #fff;
   width: 50%;
   margin: 0 25% 0 25%;
