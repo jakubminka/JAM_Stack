@@ -49,6 +49,7 @@ a:hover {
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
   color: {{ site.color.myBlue }};
+  text-transform: uppercase;
 }
 
 .nav-item a:hover span,
