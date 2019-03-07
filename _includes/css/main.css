@@ -769,7 +769,7 @@ h3 {
   display: block;
 }
 .viewMain {
-  height: 100vh;
+  height: 100%;
 }
 
 @media (max-width: 740px) {
