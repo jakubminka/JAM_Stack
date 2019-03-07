@@ -121,7 +121,7 @@ main {
   height: 15px;
   z-index: 2;
   border-bottom: 1px solid #6c615c;
-  background: {{site.color.myBlue}};
+  background: {{ site.color.myBlue }};
 #new-todo,
 .edit {
   position: relative;
