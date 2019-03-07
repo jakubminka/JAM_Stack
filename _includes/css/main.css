@@ -5,17 +5,6 @@ a:hover {
   color: #1c2a48;
 }
 
-.active {
-  background-color: #3F729B !important;
-  color: white !important;
-  outline: 1px solid #fff;
-  font-weight: bold;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
-  transition:.5s;
-}
 .active a {
 	padding: 0 0 10px;
 }
