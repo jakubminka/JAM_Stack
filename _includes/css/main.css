@@ -35,8 +35,7 @@ a:hover {
 	transform: translateY(0px);
 }
 
-
-
+/*
 .nav-item:hover{
   background-color: #3F729B !important;
   cursor: pointer;
@@ -55,7 +54,7 @@ a:hover {
   -webkit-transition:.5s;
   transition:.5s;
 }
-
+*/
 
 .card-img-top img {
   max-width: 230px;
