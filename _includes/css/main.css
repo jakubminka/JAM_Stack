@@ -864,3 +864,7 @@ h5 {
   color: #fff;
   margin: 0 40% 0 40%;
 }
+
+.myBlue {
+  color: {{ site.color.myBlue }};
+}
