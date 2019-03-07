@@ -5,6 +5,14 @@ a:hover {
   color: #1c2a48;
 }
 
+.post-list a {
+  color: {{ site.color.myBlue }} !important;
+}
+
+.post-list a:hover {
+  color: #1C2331 !important;
+}
+
 .navbar .navbar-collapse {
   text-align: center !important;
 }
