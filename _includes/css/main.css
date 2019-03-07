@@ -827,7 +827,7 @@ h3 {
 .masthead {
   display: block;
 }
-
+/*
 html,
 body,
 .view {
@@ -849,7 +849,7 @@ h1 {
 h5 {
   letter-spacing: 3px;
 }
-
+*/
 .hr-light {
   border-top: 3px solid #fff;
   width: 80px;
