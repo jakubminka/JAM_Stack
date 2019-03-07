@@ -7,6 +7,7 @@ a:hover {
 
 .nav-item a {
 	overflow: hidden;
+	padding: 0 8px;
 	height: 1em;
 }
 
