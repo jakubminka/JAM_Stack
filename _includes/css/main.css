@@ -15,7 +15,7 @@ a:hover {
 }
 .nav-item:hover {
   background-color: #3F729B;
-  opacity: 0.5;
+  color: #fff;
 }
 .nav-item a:hover {
   color: {{ site.color.myBlue }} !important;
