@@ -12,6 +12,7 @@ a:hover {
 .navbar .navbar-collapse .active {
   font-weight: 800;
   text-transform: uppercase;
+  color: {{ site.color.myBlue }};
 }
 .active,
 .active a {
