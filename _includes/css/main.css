@@ -1,11 +1,18 @@
+/* HLAVNÍ SOUBOR STYLŮ */
 a {
-  color: #3f729b;
+  color: {{ site.color.myBlue }};
 }
-
 a:hover {
   color: #1c2a48;
 }
 
+main {
+  display: flex;
+  margin: 0 auto 75px auto;
+  width: 200vw;
+}
+
+/* Stylování obrázku na kartách (eshop) */
 .card-img-top img {
   max-width: 230px;
   max-height: 95px;
@@ -19,10 +26,12 @@ a:hover {
   background-image: url("{{ page.thumbnail }}");
 }
 
+/* Reset id barvy colorBrand */
 #colorBrand {
   color: white;
 }
 
+/* Stylování formuláře */
 .formBox {
   margin-top: 90px;
   padding: 50px;
@@ -75,12 +84,7 @@ textarea {
   color: #fff;
 }
 
-main {
-  display: flex;
-  margin: 0 auto 75px auto;
-  width: 200vw;
-}
-
+/* Stylování API formuláře todoapp */
 #todoapp {
   background: #fff;
   background: rgba(255, 255, 255, 0.9);
@@ -91,7 +95,6 @@ main {
   border-top-right-radius: 2px;
   box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.15);
 }
-
 #todoapp:before {
   content: "";
   border-left: 1px solid #f5d6d6;
@@ -102,39 +105,18 @@ main {
   left: 40px;
   height: 100%;
 }
-
 #todoapp input::-webkit-input-placeholder {
   font-style: italic;
 }
-
 #todoapp input:-moz-placeholder {
   font-style: italic;
   color: #a9a9a9;
 }
-
-#todoapp h1 {
-  position: absolute;
-  top: -120px;
-  width: 100%;
-  font-size: 70px;
-  font-weight: bold;
-  text-align: center;
-  color: #b3b3b3;
-  color: rgba(255, 255, 255, 0.3);
-  text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
-  -webkit-text-rendering: optimizeLegibility;
-  -moz-text-rendering: optimizeLegibility;
-  -ms-text-rendering: optimizeLegibility;
-  -o-text-rendering: optimizeLegibility;
-  text-rendering: optimizeLegibility;
-}
-
-#header {
+#headerToDo {
   padding-top: 15px;
   border-radius: inherit;
 }
-
-#header:before {
+#headerToDo:before {
   content: "";
   position: absolute;
   top: 0;
@@ -144,42 +126,6 @@ main {
   z-index: 2;
   border-bottom: 1px solid #6c615c;
   background: #8d7d77;
-  background: -webkit-gradient(
-    linear,
-    left top,
-    left bottom,
-    from(rgba(132, 110, 100, 0.8)),
-    to(rgba(101, 84, 76, 0.8))
-  );
-  background: -webkit-linear-gradient(
-    top,
-    rgba(132, 110, 100, 0.8),
-    rgba(101, 84, 76, 0.8)
-  );
-  background: -moz-linear-gradient(
-    top,
-    rgba(132, 110, 100, 0.8),
-    rgba(101, 84, 76, 0.8)
-  );
-  background: -o-linear-gradient(
-    top,
-    rgba(132, 110, 100, 0.8),
-    rgba(101, 84, 76, 0.8)
-  );
-  background: -ms-linear-gradient(
-    top,
-    rgba(132, 110, 100, 0.8),
-    rgba(101, 84, 76, 0.8)
-  );
-  background: linear-gradient(
-    top,
-    rgba(132, 110, 100, 0.8),
-    rgba(101, 84, 76, 0.8)
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#9d8b83', EndColorStr='#847670');
-  border-top-left-radius: 1px;
-  border-top-right-radius: 1px;
-}
 
 #new-todo,
 .edit {
@@ -508,7 +454,7 @@ h3 {
 .mdl-textfield {
   width: 100%;
 }
-/* Fixes an MDL bug where the header does not scroll on small devices */
+
 .mdl-layout__container .mdl-layout--fixed-header .mdl-layout__content {
   overflow-y: visible;
   overflow-x: visible;
@@ -529,7 +475,6 @@ h3 {
   color: #0288d1;
 }
 
-/* Header */
 .logo {
   font-family: "Amaranth", sans-serif;
 }
@@ -539,7 +484,7 @@ h3 {
   margin-right: -2px;
   position: relative;
 }
-.header .mdl-layout__header-row {
+.headerToDo .mdl-layout__header-row {
   max-width: 1024px;
   width: 100%;
   height: auto;
@@ -548,7 +493,7 @@ h3 {
   position: relative;
 }
 @media screen and (max-width: 840px) {
-  .header .mdl-layout__header-row.titlebar {
+  .headerToDo .mdl-layout__header-row.titlebar {
     height: 56px;
   }
   .titlebar h3 {
@@ -606,7 +551,7 @@ h3 {
 }
 
 /* Navigation Bar */
-.header .mdl-tab {
+.headerToDo .mdl-tab {
   padding-left: 23px;
   box-sizing: border-box;
   width: 100%;
@@ -617,11 +562,11 @@ h3 {
   max-width: 1024px;
 }
 @media screen and (max-width: 609px) {
-  .header .mdl-tab {
+  .headerToDo .mdl-tab {
     width: auto;
   }
 }
-.header .tab {
+.headerToDo .tab {
   padding: 0;
   max-width: none;
 }
@@ -706,7 +651,6 @@ h3 {
   line-height: 25px;
 }
 
-/* Příspěvek */
 .post .mdl-card {
   height: 100%;
   top: 0;
@@ -785,6 +729,7 @@ h3 {
   height: 400px;
 }
 
+/* Modální okno stahování */
 .modal {
   display: none;
   position: fixed;
@@ -833,6 +778,7 @@ h3 {
   }
 }
 
+/* Horizontální čára pod hlavním nadpisem na úvodní straně */
 .hr-light {
   height: 1px;
   float: left;
@@ -843,10 +789,11 @@ h3 {
   margin: 0 40% 0 40%;
 }
 
+/* Definice stylu pro mojí vlastní barvu */
 .myBlue {
   color: {{ site.color.myBlue }};
 }
 
 .btn-login, .download-form {
-
+  margin-top: 10px;
 }
