@@ -9,7 +9,7 @@ a:hover {
   text-transform: uppercase;
 }
 .active {
-  background-color: #1C2331 !important;
+  background-color: transparent !important;
 }
 .text-nowrap {
     white-space: nowrap !important;
