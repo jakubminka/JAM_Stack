@@ -4,8 +4,9 @@ a {
 a:hover {
   color: #1c2a48;
 }
-.nav > li > a:hover{
-    background-color:#FCC;
+.btn-change:hover{
+    -webkit-transform: scale(1.1);
+    background: #31708f;
 }
 
 .card-img-top img {
