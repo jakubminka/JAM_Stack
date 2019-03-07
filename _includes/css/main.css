@@ -783,7 +783,3 @@ h5 {
 .myBlueBg {
   background-color: {{ site.color.myBlue }} !important;
 }
-
-#btn-login:hover {
-  transform: scale(1.5);
-}
