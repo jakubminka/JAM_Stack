@@ -708,6 +708,7 @@ h3 {
   height: 400px;
 }
 
+/* Nastavení modálního vyskakovacího okna */
 .modal {
   display: none;
   position: fixed;
@@ -746,8 +747,6 @@ h3 {
 .masthead {
   display: block;
 }
-
-/* Required for full background image */
 
 html,
 body,
