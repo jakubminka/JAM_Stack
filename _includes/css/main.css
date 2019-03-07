@@ -6,7 +6,7 @@ a:hover {
 }
 
 .nav-item:hover {
-  background-color: #1c2a48;
+  background-color: #fff;
 }
 .nav-item a:hover {
   color: {{ site.color.myBlue }} !important;
