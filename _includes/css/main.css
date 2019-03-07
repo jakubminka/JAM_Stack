@@ -18,7 +18,7 @@ a:hover {
   color: #fff;
 }
 .nav-item a:hover {
-  color: {{ site.color.myBlue }} !important;
+  color: #fff !important;
   cursor: pointer;
 }
 
