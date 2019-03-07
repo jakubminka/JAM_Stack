@@ -498,7 +498,7 @@ h3 {
   position: relative;
 }
 @media screen and (max-width: 840px) {
-  .headerToDo .mdl-layout__header-row.titlebar {
+  .header .mdl-layout__header-row.titlebar {
     height: 56px;
   }
   .titlebar h3 {
@@ -567,11 +567,11 @@ h3 {
   max-width: 1024px;
 }
 @media screen and (max-width: 609px) {
-  .headerToDo .mdl-tab {
+  .header .mdl-tab {
     width: auto;
   }
 }
-.headerToDo .tab {
+.header .tab {
   padding: 0;
   max-width: none;
 }
