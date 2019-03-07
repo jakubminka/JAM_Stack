@@ -5,6 +5,10 @@ a:hover {
   color: #1c2a48;
 }
 
+.active {
+  background-color: none !important;
+}
+
 .nav-item {
   width: auto;
 }
