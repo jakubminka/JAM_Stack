@@ -9,7 +9,7 @@ a:hover {
   background-color: #3F729B !important;
   color: white !important;
 }
-.nav-item:active:hover{
+.nav-item.active:hover{
   background-color: #1C2331 !important;
   color: white !important;
 }
