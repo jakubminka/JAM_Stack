@@ -7,41 +7,11 @@ pagination:
   enabled: true
 ---
 
-<!--
-  <section id="posts" class="py-5">
-    <div class="container">
-      <section class="row post-list">
-        {% for post in site.posts %}
-        <div class="col-md-6 col-lg-4 col-xl-3">
-          <div class="card">
-            <img
-              class="card-img-top"
-              src="{{ post.thumbnail }}"
-              alt="Card image"
-            />
-            <div class="card-body">
-              <h5 class="card-title">{{ post.title }}</h5>
-              <p class="card-text">{{ post.excerpt }}</p>
-              <a
-                href="{{ post.url | prepend: site.baseurl }}"
-                class="btn
-              btn-primary"
-                >Více</a
-              >
-            </div>
-          </div>
-        </div>
-        {% endfor %}
-      </section>
-    </div>
-    {% include algolia.html %}
-  </section>
--->
 <section id="posts" class="py-5">
   <div class="container">
     <div class="row d-flex justify-content-center">
       {% for post in site.posts %}
-      <div class="col-md-6 col-xl-5 mb-4">
+      <div class="col-md-4 col-xl-5 mb-4">
         <div class="overlay rounded z-depth-2">
           <a href="{{ post.url | prepend: site.baseurl }}"
             ><img
