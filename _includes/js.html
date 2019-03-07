@@ -16,7 +16,20 @@
 ></script>
 
 <!-- Auth0 API -->
-<script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
+<script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js">
+  window.addEventListener("load", function() {
+    var idToken;
+    var accessToken;
+    var expiresAt;
+
+    var webAuth = new auth0.WebAuth({
+      domain: "jamstack.eu.auth0.com",
+      clientID: "5c6ab07b82075504c03c7069",
+      responseType: "token id_token",
+      scope: "openid",
+      redirectUri: window.location.href
+    });
+</script>
 
 <!-- Script pro přihlášení do Netlify CMS -->
 <script>
@@ -38,7 +51,11 @@
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 
 <!-- Script Google Maps API -->
-<script>
+<script
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTjhUHTwh5cEeZziPWxcD2NRt3BEfZPQk&callback=initMap"
+  async
+  defer
+>
   var map;
   function initMap() {
     map = new google.maps.Map(document.getElementById("map"), {
@@ -47,11 +64,6 @@
     });
   }
 </script>
-<script
-  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTjhUHTwh5cEeZziPWxcD2NRt3BEfZPQk&callback=initMap"
-  async
-  defer
-></script>
 
 <!-- Snipcart API konfigurace -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
