@@ -732,5 +732,5 @@ h5 {
 }
 
 .myBlue {
-  color: {{ site.color.myBlue }};
+  color: {{ site.color.myBlue }} !important;
 }
