@@ -773,12 +773,12 @@ h3 {
 .masthead {
   display: block;
 }
-.viewMain {
-  height: 100%;
+.view {
+  height: 100vh;
 }
 
 @media (max-width: 740px) {
-  .viewMain {
+  .view {
     height: 100vh;
   }
 }
@@ -792,8 +792,4 @@ h3 {
   background: #fff;
   width: 20%;
   margin: 0 40% 0 40%;
-}
-
-.btn-login, .download-form {
-  margin-top: 10px;
 }
