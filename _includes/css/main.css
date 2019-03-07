@@ -842,3 +842,7 @@ h3 {
   width: 20%;
   margin: 0 40% 0 40%;
 }
+
+.myBlue {
+  color: {{ site.color.myBlue }}
+}

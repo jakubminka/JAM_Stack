@@ -25,7 +25,7 @@ color:
   primary-dark: "#000000"
   links: "#219ab3"
   background: "f8f8ff"
-  blue: "#42bcf4"
+  myBlue: "#42bcf4"
 
 # ALGOLIA NASTAVENÍ
 algolia:
