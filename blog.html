@@ -55,15 +55,17 @@ pagination:
           </a>
         </div>
         <div class="card-body">
-          <a href="" class="green-text">
-            <h5 class="font-weight-bold mt-2 mb-3">{{ post.categories }}</h5>
-          </a>
-          <a href="{{ post.url | prepend: site.baseurl }}"
-            ><h4 class="font-weight-bold mb-3">{{ post.title }}</h4></a
+          <h5 class="font-weight-bold unique-color-dark mt-2 mb-3">
+            {{ post.categories }}
+          </h5>
+          <a class="unique-color" href="{{ post.url | prepend: site.baseurl }}"
+            ><h4 class="font-weight-bold unique-color mb-3">
+              {{ post.title }}
+            </h4></a
           >
           <p>{{ post.excerpt }}</p>
           <a
-            class="btn unique-color btn-rounded btn-md"
+            class="btn unique-color text-center btn-rounded btn-md"
             href="{{ post.url | prepend: site.baseurl }}"
             >Zobrazit více</a
           >
