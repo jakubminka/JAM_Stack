@@ -7,20 +7,18 @@ a:hover {
 
 .navbar .navbar-collapse {
   text-align: center !important;
+  text-transform: uppercase;
 }
 .navbar .navbar-collapse .active a,
 .navbar .navbar-collapse .active {
-  border-style: none !important;
   font-weight: 800;
 }
 .active,
 .active a {
   background-color: transparent !important;
-  border-bottom: 1px solid #fff;
   -webkit-transition: all .5s;
   -moz-transition: all .5s;
   transition: all .5s;
-
 }
 .text-nowrap {
     white-space: nowrap !important;
