@@ -17,18 +17,27 @@
 
 <!-- Auth0 API -->
 <script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js">
-  window.addEventListener("load", function() {
-    var idToken;
-    var accessToken;
-    var expiresAt;
+    window.addEventListener("load", function() {
+      var idToken;
+      var accessToken;
+      var expiresAt;
 
-    var webAuth = new auth0.WebAuth({
-      domain: "jamstack.eu.auth0.com",
-      clientID: "5c6ab07b82075504c03c7069",
-      responseType: "token id_token",
-      scope: "openid",
-      redirectUri: window.location.href
+      var webAuth = new auth0.WebAuth({
+        domain: "jamstack.eu.auth0.com",
+        clientID: "5c6ab07b82075504c03c7069",
+        responseType: "token id_token",
+        scope: "openid",
+        redirectUri: window.location.href
+      });
+
+    var loginBtn = document.getElementById('btn-login');
+
+    loginBtn.addEventListener('click', function(e) {
+      e.preventDefault();
+      webAuth.authorize();
     });
+
+  });
 </script>
 
 <!-- Script pro přihlášení do Netlify CMS -->
