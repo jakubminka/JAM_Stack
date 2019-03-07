@@ -12,9 +12,6 @@ a:hover {
   border-style: none !important;
   font-weight: 800;
 }
-.nav-item a {
-  text-transform: uppercase !important;
-}
 .active,
 .active a {
   background-color: transparent !important;
