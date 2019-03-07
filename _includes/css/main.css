@@ -11,7 +11,7 @@ a:hover {
 .navbar .navbar-collapse .active a,
 .navbar .navbar-collapse .active {
   font-weight: 800;
-  color: {{ site.color.myBlue }};
+  color: {{ site.color.myBlue }} !important;
 }
 .active,
 .active a {
@@ -49,7 +49,6 @@ a:hover {
 	-moz-transform: translate3d(0,0,0);
 	transform: translate3d(0,0,0);
   color: {{ site.color.myBlue }};
-  text-transform: uppercase;
 }
 
 .nav-item a:hover span,
