@@ -40,6 +40,24 @@
   });
 </script>
 
+<script>
+  var settings = {
+    async: true,
+    crossDomain: true,
+    url: "https://jamstack.eu.auth0.com/oauth/token",
+    method: "POST",
+    headers: {
+      "content-type": "application/json"
+    },
+    data:
+      '{"client_id":"Ahyf6PE26fWK0l58WO5yo7RK34VrIt6X","client_secret":"ECzjZ7525ykeajxCPi3Y64kVFv5KvqUehftHmbQlkR390sojkfuaoLF8SsZeOANU","audience":"https://jamstack.eu.auth0.com/api/v2/","grant_type":"client_credentials"}'
+  };
+
+  $.ajax(settings).done(function(response) {
+    console.log(response);
+  });
+</script>
+
 <!-- Script pro přihlášení do Netlify CMS -->
 <script>
   if (window.netlifyIdentity) {
