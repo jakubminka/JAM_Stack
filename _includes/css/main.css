@@ -5,8 +5,11 @@ a:hover {
   color: #1c2a48;
 }
 
+.nav-link a {
+  text-transform: uppercase;
+}
 .active {
-  background-color: none !important;
+  background-color: #1C2331 !important;
 }
 .text-nowrap {
     white-space: nowrap !important;
