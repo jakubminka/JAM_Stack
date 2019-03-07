@@ -5,6 +5,17 @@ a:hover {
   color: #1c2a48;
 }
 
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+.navbar .navbar-collapse {
+  text-align: center !important;
+}
+.navbar .navbar-collapse .active a {
+  border-bottom: 1px solid #fff;
+}
 .nav-link a {
   text-transform: uppercase !important;
 }
