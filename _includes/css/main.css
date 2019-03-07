@@ -5,6 +5,9 @@ a:hover {
   color: #1c2a48;
 }
 
+.nav-item {
+  width: auto;
+}
 .nav-item a {
 	overflow: hidden;
 	padding: 0 12px;
