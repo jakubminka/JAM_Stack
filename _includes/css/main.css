@@ -427,7 +427,7 @@ label[for="toggle-all"] {
   display: block;
 }
 
-/* Material design CSS */
+/*
 .mdl-menu a {
   text-decoration: none;
 }
@@ -575,7 +575,6 @@ h3 {
   position: absolute;
 }
 
-/* Drawer */
 .mdl-layout__drawer-button {
   display: none;
 }
@@ -602,8 +601,6 @@ h3 {
     top: 3px;
   }
 }
-
-/* Nová stránka s příspěvky */
 #page-add {
   display: block;
   text-align: center;
@@ -635,8 +632,6 @@ h3 {
 .comments-container .username {
   line-height: 25px;
 }
-
-/* Příspěvek */
 .post .mdl-card {
   height: 100%;
   top: 0;
@@ -692,8 +687,6 @@ h3 {
 .post .star .starred {
   display: none;
 }
-
-/* Splash Page */
 #page-splash {
   position: fixed;
   top: 0;
@@ -709,7 +702,7 @@ h3 {
   color: white;
   flex-direction: column;
 }
-
+*/
 /* Google Map API stylování */
 #map {
   height: 400px;
