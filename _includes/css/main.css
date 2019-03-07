@@ -7,11 +7,11 @@ a:hover {
 
 .navbar .navbar-collapse {
   text-align: center !important;
-  text-transform: uppercase;
 }
 .navbar .navbar-collapse .active a,
 .navbar .navbar-collapse .active {
   font-weight: 800;
+  text-transform: uppercase;
 }
 .active,
 .active a {
