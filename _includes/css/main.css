@@ -768,12 +768,12 @@ h3 {
 .masthead {
   display: block;
 }
-.view {
+.viewMain {
   height: 100vh;
 }
 
 @media (max-width: 740px) {
-  .view {
+  .viewMain {
     height: 100vh;
   }
 }
