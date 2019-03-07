@@ -14,9 +14,15 @@ a:hover {
   -webkit-transition:.5s;
   transition:.5s;
 }
-.active:hover,
-.active a:hover {
+.active:hover {
   background-color: #1C2331 !important;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
+.active a:hover {
   color: white !important;
   -o-transition:.5s;
   -ms-transition:.5s;
@@ -25,7 +31,15 @@ a:hover {
   transition:.5s;
 }
 
-.nav-item:hover,
+.nav-item:hover{
+  background-color: #3F729B !important;
+  cursor: pointer;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  transition:.5s;
+}
 .nav-item a:hover {
   color: #1C2331 !important;
   cursor: pointer;
