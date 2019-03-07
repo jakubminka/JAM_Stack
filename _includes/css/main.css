@@ -4,6 +4,10 @@ a {
 a:hover {
   color: #1c2a48;
 }
+.nav-item a:hover {
+  color: black !important;
+  cursor: pointer;
+}
 
 .card-img-top img {
   max-width: 230px;
