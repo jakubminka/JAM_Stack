@@ -9,26 +9,22 @@ layout: page
 
     <div class="post-list" id="search-hits">
       {% for post in site.posts %}
-      <div class="card">
-        <div class="card-header">
-          {% assign date_format = site.minima.date_format | default: "%b %-d,
-          %Y" %}
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-        </div>
-        <div class="card-body">
-          <div class="card-title" style="color: #3F729B">
-            <a
-              class="post-link"
-              href="{{ post.url | relative_url }}"
-              style="color: #3F729B"
-              >{{ post.title | escape }}</a
-            >
-          </div>
-          <div class="card-text">{{ post.excerpt }}</div>
-        </div>
-        {% endfor %}
+      <div class="post-item">
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y"
+        %} <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+        <h3 style="color: #3F729B">
+          <a
+            class="post-link"
+            href="{{ post.url | relative_url }}"
+            style="color: #3F729B"
+            >{{ post.title | escape }}</a
+          >
+        </h3>
+        <div class="post-snippet">{{ post.excerpt }}</div>
       </div>
-      {% include algolia.html %}
+      {% endfor %}
     </div>
+    {% include algolia.html %}
   </div>
 </div>

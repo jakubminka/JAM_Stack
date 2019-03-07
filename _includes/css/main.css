@@ -71,10 +71,6 @@ a:hover {
   background-image: url("{{ page.thumbnail }}");
 }
 
-.post-item {
-  
-}
-
 #colorBrand {
   color: white;
 }
