@@ -715,9 +715,11 @@ h3 {
 
 html,
 body,
-header,
-.view {
+header{
   height: 100%;
+}
+.view {
+  height: 80%;
 }
 
 @media (max-width: 740px) {
