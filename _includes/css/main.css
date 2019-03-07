@@ -4,8 +4,12 @@ a {
 a:hover {
   color: #1c2a48;
 }
+
+.nav-item:hover {
+  background-color: #1c2a48;
+}
 .nav-item a:hover {
-  color: black !important;
+  color: {{ site.color.myBlue }} !important;
   cursor: pointer;
 }
 
