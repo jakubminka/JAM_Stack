@@ -7,8 +7,8 @@ a:hover {
 
 .nav-item a {
 	overflow: hidden;
-	padding: 0 10px;
-	height: 2em;
+	padding: 0 12px;
+	height: 1.8em;
 }
 
 .nav-item a span {
