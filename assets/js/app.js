@@ -115,6 +115,11 @@
           "You are not logged in! Please log in to continue.";
       }
     }
+    if (localStorage.getItem('isLoggedIn') === 'true') {
+    renewTokens();
+  } else {
+    handleAuthentication();
+  }
   });
 </script>
 
