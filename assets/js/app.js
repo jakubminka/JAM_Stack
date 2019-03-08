@@ -1,7 +1,5 @@
 /* Auth0 API */
-<script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
-<script>
-  window.addEventListener("load", function() {
+window.addEventListener("load", function() {
     var idToken;
     var accessToken;
     var expiresAt;
@@ -139,4 +137,3 @@
   $.ajax(settings).done(function(response) {
     console.log(response);
   });
-</script>
