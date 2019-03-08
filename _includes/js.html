@@ -8,55 +8,14 @@
 <!-- Script databáze PouchDB -->
 <script src="//cdn.jsdelivr.net/npm/pouchdb@7.0.0/dist/pouchdb.min.js"></script>
 
+<script src="assets/js/app.js"></script>
+
 <!-- Bootstrap script -->
 <script
   src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
   integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
   crossorigin="anonymous"
 ></script>
-
-<!-- Auth0 API -->
-<script src="https://cdn.auth0.com/js/auth0/9.10/auth0.min.js"></script>
-<script>
-  window.addEventListener("load", function() {
-    var idToken;
-    var accessToken;
-    var expiresAt;
-
-    var webAuth = new auth0.WebAuth({
-      domain: "jamstack.eu.auth0.com",
-      clientID: "QWl4Mom8UxchOL70r88rSDL7M345Is7M",
-      responseType: "token id_token",
-      scope: "openid",
-      redirectUri: window.location.href
-    });
-
-    var loginBtn = document.getElementById("btn-login");
-
-    loginBtn.addEventListener("click", function(e) {
-      e.preventDefault();
-      webAuth.authorize();
-    });
-  });
-</script>
-
-<script>
-  var settings = {
-    async: true,
-    crossDomain: true,
-    url: "https://jamstack.eu.auth0.com/oauth/token",
-    method: "POST",
-    headers: {
-      "content-type": "application/json"
-    },
-    data:
-      '{"client_id":"Ahyf6PE26fWK0l58WO5yo7RK34VrIt6X","client_secret":"ECzjZ7525ykeajxCPi3Y64kVFv5KvqUehftHmbQlkR390sojkfuaoLF8SsZeOANU","audience":"https://jamstack.eu.auth0.com/api/v2/","grant_type":"client_credentials"}'
-  };
-
-  $.ajax(settings).done(function(response) {
-    console.log(response);
-  });
-</script>
 
 <!-- Script pro přihlášení do Netlify CMS -->
 <script>
