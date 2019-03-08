@@ -16,7 +16,6 @@
     var idToken;
     var accessToken;
     var expiresAt;
-
     var webAuth = new auth0.WebAuth({
       domain: "jamstack.eu.auth0.com",
       clientID: "QWl4Mom8UxchOL70r88rSDL7M345Is7M",
@@ -24,21 +23,18 @@
       scope: "openid",
       redirectUri: window.location.href
     });
-
     var loginBtn = document.getElementById("btn-login");
+    var loginStatus = document.querySelector(".container h4");
+    var loginView = document.getElementById("login-view");
+    var homeView = document.getElementById("home-view");
+    var homeViewBtn = document.getElementById("btn-home-view");
+    var loginBtn = document.getElementById("btn-login");
+    var logoutBtn = document.getElementById("btn-logout");
 
     loginBtn.addEventListener("click", function(e) {
       e.preventDefault();
       webAuth.authorize();
     });
-    var loginStatus = document.querySelector(".container h4");
-    var loginView = document.getElementById("login-view");
-    var homeView = document.getElementById("home-view");
-
-    // buttons and event listeners
-    var homeViewBtn = document.getElementById("btn-home-view");
-    var loginBtn = document.getElementById("btn-login");
-    var logoutBtn = document.getElementById("btn-logout");
 
     homeViewBtn.addEventListener("click", function() {
       homeView.style.display = "inline-block";
@@ -46,12 +42,6 @@
     });
 
     logoutBtn.addEventListener("click", logout);
-
-    if (localStorage.getItem("isLoggedIn") === "true") {
-      renewTokens();
-    } else {
-      handleAuthentication();
-    }
 
     function handleAuthentication() {
       webAuth.parseHash(function(err, authResult) {
@@ -132,24 +122,11 @@
           "You are not logged in! Please log in to continue.";
       }
     }
-  });
-</script>
-
-<script>
-  var settings = {
-    async: true,
-    crossDomain: true,
-    url: "https://jamstack.eu.auth0.com/oauth/token",
-    method: "POST",
-    headers: {
-      "content-type": "application/json"
-    },
-    data:
-      '{"client_id":"Ahyf6PE26fWK0l58WO5yo7RK34VrIt6X","client_secret":"ECzjZ7525ykeajxCPi3Y64kVFv5KvqUehftHmbQlkR390sojkfuaoLF8SsZeOANU","audience":"https://jamstack.eu.auth0.com/api/v2/","grant_type":"client_credentials"}'
-  };
-
-  $.ajax(settings).done(function(response) {
-    console.log(response);
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      renewTokens();
+    } else {
+      handleAuthentication();
+    }
   });
 </script>
 
