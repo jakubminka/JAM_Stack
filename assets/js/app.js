@@ -3,7 +3,6 @@ window.addEventListener("load", function() {
     var idToken;
     var accessToken;
     var expiresAt;
-
     var webAuth = new auth0.WebAuth({
       domain: "jamstack.eu.auth0.com",
       clientID: "QWl4Mom8UxchOL70r88rSDL7M345Is7M",
@@ -11,22 +10,19 @@ window.addEventListener("load", function() {
       scope: "openid",
       redirectUri: window.location.href
     });
-
     var loginBtn = document.getElementById("btn-login");
+    var loginStatus = document.querySelector(".container h4");
+    var loginView = document.getElementById("login-view");
+    var homeView = document.getElementById("home-view");
+    var homeViewBtn = document.getElementById("btn-home-view");
+    var loginBtn = document.getElementById("btn-login");
+    var logoutBtn = document.getElementById("btn-logout");
 
     loginBtn.addEventListener("click", function(e) {
       e.preventDefault();
       webAuth.authorize();
     });
-    var loginStatus = document.querySelector(".container h4");
-    var loginView = document.getElementById("login-view");
-    var homeView = document.getElementById("home-view");
-
-    // buttons and event listeners
-    var homeViewBtn = document.getElementById("btn-home-view");
-    var loginBtn = document.getElementById("btn-login");
-    var logoutBtn = document.getElementById("btn-logout");
-
+    
     homeViewBtn.addEventListener("click", function() {
       homeView.style.display = "inline-block";
       loginView.style.display = "none";
