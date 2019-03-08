@@ -47,6 +47,12 @@
 
     logoutBtn.addEventListener("click", logout);
 
+    if (localStorage.getItem("isLoggedIn") === "true") {
+      renewTokens();
+    } else {
+      handleAuthentication();
+    }
+
     function handleAuthentication() {
       webAuth.parseHash(function(err, authResult) {
         if (authResult && authResult.accessToken && authResult.idToken) {
@@ -125,11 +131,6 @@
         loginStatus.innerHTML =
           "You are not logged in! Please log in to continue.";
       }
-    }
-    if (localStorage.getItem("isLoggedIn") === "true") {
-      renewTokens();
-    } else {
-      handleAuthentication();
     }
   });
 </script>
