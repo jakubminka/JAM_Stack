@@ -30,8 +30,8 @@ button {
   border-radius: 5px !important;
   color: #42bcf4 !important;
   font-weight: bold !important;
-  display: block;
-  text-transform: uppercase;
+  display: block !important;
+  text-transform: uppercase !important;
 }
 button::before,
 button::after {
