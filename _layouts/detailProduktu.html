@@ -21,11 +21,11 @@
           <p>{{ content }}</p>
           <button
             class="snipcart-add-item btn unique-dark md-2"
-            data-item-name="{{ product.title }}"
-            data-item-id="{{ product.id }}"
-            data-item-image="{{ product.thumbnail }}"
-            data-item-url="{{ product.url }}"
-            data-item-price="{{ product.price }}"
+            data-item-name="{{ page.title }}"
+            data-item-id="{{ page.id }}"
+            data-item-image="{{ page.thumbnail }}"
+            data-item-url="{{ site.baseurl }}"
+            data-item-price="{{ page.price }}"
           >
             Koupit za {{ page.price }} Kč
           </button>
