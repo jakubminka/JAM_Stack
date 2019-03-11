@@ -17,6 +17,45 @@ a:hover {
   height: 100%;
 }
 
+button,
+button::after {
+  -webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+	transition: all 0.3s;
+}
+button {
+  background: none !important;
+  border: 3px solid #1c2a48 !important;
+  border-radius: 5px !important;
+  color: #fff;
+  display: block;
+  text-transform: uppercase;
+}
+button::before,
+button::after {
+  background: #1c2a48;
+  content: '';
+  position: absolute;
+  z-index: -1;
+}
+button:hover {
+  color: #1c2a48;
+}
+.btn::after {
+  height: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.btn:hover:after {
+height: 100%;
+}
+
+.btn-change {
+
+}
+
 .links {
   list-style-type: none;
   text-decoration: none;
