@@ -13,10 +13,13 @@
     {% endif %}
     <div class="container">
       <div class="row">
-        <div class="col-md-6">
-          <img src="{{page.thumbnail}}" width="200px" height="100px" />
+        <div class="col-md-4">
+          <img
+            src="{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}"
+            style="max-width:100%"
+          />
         </div>
-        <div class="col-md-6">
+        <div class="col-md-8">
           <h4>{{ page.title }}</h4>
           <span>{{ page.excerpt }}</span>
           <p>{{ page.description }}</p>
