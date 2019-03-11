@@ -12,24 +12,26 @@ navigation_weight: 6
       <div class="col-lg-3 col-md-6 mb-lg-0 mb-4">
         <div class="card align-items-center">
           <div class="view overlay">
-            <a href="{{ product.url }}"
+            <a href="{{ site.baseurl }}{{ product.url }}"
               ><img
                 src="{{ product.thumbnail }}"
                 class="card-img-top"
                 alt=""
                 style="width: 100%; height:200px;"
             /></a>
-            <a href="{{ product.url }}">
+            <a href="{{ site.baseurl }}{{ product.url }}">
               <div class="mask rgba-white-slight"></div>
             </a>
           </div>
           <div class="card-body text-center">
-            <a href="{{ product.url }}" class="grey-text"
+            <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
               ><h5>{{ product.category }}</h5></a
             >
             <h5>
               <strong>
-                <a href="{{ product.url }}" class="dark-grey-text"
+                <a
+                  href="{{ site.baseurl }}{{ product.url }}"
+                  class="dark-grey-text"
                   >{{ product.title }}</a
                 >
               </strong>
