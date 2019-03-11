@@ -17,6 +17,7 @@ a:hover {
 .links li a:hover {
   color: #1c2a48 !important;
   font-weight: bold;
+  transition: 0.3s;
 }
 
 .footer-title {
