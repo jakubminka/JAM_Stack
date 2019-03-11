@@ -15,7 +15,7 @@ a:hover {
   padding: 0;
 }
 .links li a:hover {
-  color: {{ myBlue }} !important;
+  color: #1C2331 !important;
 }
 
 .post-list a {
