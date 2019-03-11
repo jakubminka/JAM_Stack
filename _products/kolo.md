@@ -2,6 +2,7 @@
 title: Kolo
 excerpt: Toto je jízdní kolo
 price: 2000
+id: 2
 layout: detailProduktu
 thumbnail: /images/uploads/markus-spiske-1154465-unsplash.jpg
 categories: sport

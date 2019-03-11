@@ -2,7 +2,7 @@
 title: Míč
 excerpt: Toto je míč
 price: 500
-id: 6
+id: 1
 layout: detailProduktu
 thumbnail: /images/uploads/football-157931_1280.png
 categories: sport
