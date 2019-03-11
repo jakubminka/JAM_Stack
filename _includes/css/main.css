@@ -10,6 +10,9 @@ a {
 a:hover {
   color: #1c2a48;
 }
+.higherPos {
+  z-index: 2 !important;
+}
 
 #particles-js {
   position: absolute !important;
