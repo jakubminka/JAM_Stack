@@ -15,7 +15,7 @@ a:hover {
   padding: 0;
 }
 .links li a:hover {
-  color: {{ myBlue }};
+  color: {{ myBlue }} !important;
 }
 
 .post-list a {
