@@ -13,7 +13,9 @@
     {% endif %}
     <div class="container">
       <div class="row">
-        <div class="col-md-6"><img src="page.thumbnail" /></div>
+        <div class="col-md-6">
+          <img src="{{page.thumbnail}}" width="200px" height="100px" />
+        </div>
         <div class="col-md-6">
           <h4>{{ page.title }}</h4>
           <span>{{ page.excerpt }}</span>
