@@ -3,14 +3,7 @@
 <html>
   {% include head.html %}
   <body>
-    {% include nav.html %} {% if page.thumbnail %}
-    <header
-      class="masthead"
-      style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; background-position: center center; height: 400px"
-    ></header>
-    {% else %}
-    <header>{% include banner.html %}</header>
-    {% endif %}
+    {% include nav.html %}{% include banner.html %}
     <div class="container mt-10 mb-10">
       <div class="row">
         <div class="col-md-4">
