@@ -39,14 +39,14 @@ pagination:
             </h4></a
           >
           <p class="text-center">{{ post.excerpt }}</p>
+          <button
+            class="btn btn-change text-center mb-2"
+            href="{{ post.url | prepend: site.baseurl }}"
+          >
+            Zobrazit více
+          </button>
         </div>
       </div>
-      <button
-        class="btn btn-change text-center bb-2"
-        href="{{ post.url | prepend: site.baseurl }}"
-      >
-        Zobrazit více
-      </button>
       {% endfor %}
     </div>
     {% include algolia.html %}
