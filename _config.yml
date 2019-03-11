@@ -15,7 +15,6 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-gems:
   - jekyll-language-plugin
 
 permalink: pretty
