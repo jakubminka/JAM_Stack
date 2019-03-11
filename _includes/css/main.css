@@ -35,7 +35,7 @@ button {
 }
 button::before,
 button::after {
-  background: #42bcf4 !important;
+  background-color: #42bcf4 !important;
   content: '' !important;
   position: absolute !important;
   z-index: -1 !important;
