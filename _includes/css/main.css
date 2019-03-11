@@ -42,7 +42,7 @@ button::after {
 }
 button:hover {
   font-weight: bold !important;
-  color: transparent !important;
+  color: #fff !important;
 }
 .btn-change::after {
   height: 0;
