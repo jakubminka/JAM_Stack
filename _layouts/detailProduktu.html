@@ -18,11 +18,12 @@
           <span>{{ page.categories }}</span>
           <p>{{ page.description }}</p>
           <button
-            class="snipcart-add-item btn"
-            data-item-name="{{ page.title }}"
-            data-item-image="{{ page.thumbnail }}"
-            data-item-url="{{ site.baseurl }}"
-            data-item-price="{{ page.price }}"
+            class="snipcart-add-item btn unique-dark md-2"
+            data-item-name="{{ product.title }}"
+            data-item-id="{{ product.id }}"
+            data-item-image="{{ product.thumbnail }}"
+            data-item-url="{{ product.url }}"
+            data-item-price="{{ product.price }}"
           >
             Koupit za {{ page.price }} Kč
           </button>
