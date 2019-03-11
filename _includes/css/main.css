@@ -564,7 +564,7 @@ h5 {
 }
 
 .hr-light {
-  height: 2px;
+  height: 2px !important;
   width: 20%;
   color: #fff;
   margin: 0 40% 0 40%;
