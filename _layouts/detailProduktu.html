@@ -13,25 +13,21 @@
     {% endif %}
     <div class="container">
       <div class="row">
-        <div class="col-md-6" style="height: 100px">
-          <div
-            style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover;"
-          ></div>
-          <div class="col-md-6">
-            <h4>{{ page.title }}</h4>
-            <span>{{ page.excerpt }}</span>
-            <p>{{ page.description }}</p>
-            <button
-              class="snipcart-add-item btn"
-              data-item-name="{{ page.name }}"
-              data-item-id="{{ page.sku }}"
-              data-item-image="{{ page.image }}"
-              data-item-url="{{ site.baseurl }}"
-              data-item-price="{{ page.price }}"
-            >
-              Koupit za {{ page.price }} Kč
-            </button>
-          </div>
+        <div class="col-md-6"><img src="page.thumbnail" /></div>
+        <div class="col-md-6">
+          <h4>{{ page.title }}</h4>
+          <span>{{ page.excerpt }}</span>
+          <p>{{ page.description }}</p>
+          <button
+            class="snipcart-add-item btn"
+            data-item-name="{{ page.name }}"
+            data-item-id="{{ page.sku }}"
+            data-item-image="{{ page.image }}"
+            data-item-url="{{ site.baseurl }}"
+            data-item-price="{{ page.price }}"
+          >
+            Koupit za {{ page.price }} Kč
+          </button>
         </div>
       </div>
     </div>
