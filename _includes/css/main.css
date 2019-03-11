@@ -5,6 +5,12 @@ a:hover {
   color: #1c2a48;
 }
 
+.links {
+  list-style-type: none;
+  text-decoration: none;
+  
+}
+
 .post-list a {
   color: {{ site.color.myBlue }} !important;
 }
