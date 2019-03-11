@@ -3,7 +3,7 @@
 <html>
   {% include head.html %}
   <body>
-    {% include nav.html %} {% if page.background %}
+    {% include nav.html %} {% if page.thumbnail %}
     <header
       class="masthead"
       style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; height: 400px"
