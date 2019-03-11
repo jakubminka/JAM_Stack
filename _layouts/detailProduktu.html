@@ -6,7 +6,7 @@
     {% include nav.html %} {% if page.thumbnail %}
     <header
       class="masthead"
-      style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; height: 400px"
+      style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; background-position: center center; height: 400px"
     ></header>
     {% else %}
     <header>{% include banner.html %}</header>
