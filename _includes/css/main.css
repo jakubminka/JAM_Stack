@@ -7,12 +7,6 @@ body {
 a {
   color: {{ site.color.myBlue }};
 }
-footer {
-  position: absolute !important;
-  right: 0 !important;
-  bottom: 0 !important;
-  left: 0 !important;
-}
 a:hover {
   color: #1c2a48;
 }
