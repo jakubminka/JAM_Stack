@@ -25,15 +25,20 @@ pagination:
           </a>
         </div>
         <div class="card-body">
-          <h5 style="color: #1C2331" class="font-weight-bold mt-2 mb-3">
+          <h5
+            style="color: #1C2331"
+            class="font-weight-bold mt-2 mb-3 text-center"
+          >
             {{ post.categories }}
           </h5>
           <a
             style="color: #3F729B"
             href="{{ post.url | prepend: site.baseurl }}"
-            ><h4 class="font-weight-bold mb-3">{{ post.title }}</h4></a
+            ><h4 class="font-weight-bold mb-3 text-center">
+              {{ post.title }}
+            </h4></a
           >
-          <p>{{ post.excerpt }}</p>
+          <p class="text-center">{{ post.excerpt }}</p>
           <button
             class="btn btn-change text-center btn-md"
             href="{{ post.url | prepend: site.baseurl }}"
