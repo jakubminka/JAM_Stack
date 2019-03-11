@@ -53,7 +53,7 @@ button::after {
 }
 button:hover {
   font-weight: bold !important;
-  color: #fff;
+  color: inherit !important;
 }
 .btn-change::after {
   height: 0 !important;
