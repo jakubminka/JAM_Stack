@@ -29,7 +29,7 @@ button {
   border: 3px solid #42bcf4 !important;
   border-radius: 5px !important;
   color: #42bcf4 !important;
-  transition: all font-weight bold 0.3s;
+  font-weight: bold !important;
   display: block;
   text-transform: uppercase;
 }
