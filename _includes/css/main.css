@@ -25,7 +25,7 @@ button::after {
 	transition: all 0.3s;
 }
 button {
-  background: none !important;
+  background-color: none !important;
   border: 3px solid #42bcf4 !important;
   border-radius: 5px !important;
   color: #fff !important;
