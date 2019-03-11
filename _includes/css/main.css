@@ -1,6 +1,9 @@
 html {
   font-family: 'Roboto', sans-serif !important;
 }
+body {
+  font: normal 'Roboto', sans-serif;
+}
 a {
   color: {{ site.color.myBlue }};
 }
