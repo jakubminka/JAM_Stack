@@ -40,7 +40,7 @@ button::after {
   z-index: -1;
 }
 button:hover {
-  color: #42bcf4;
+  color: #fff;
 }
 .btn-change::after {
   height: 0;
