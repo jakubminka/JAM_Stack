@@ -34,11 +34,12 @@ pagination:
             ><h4 class="font-weight-bold mb-3">{{ post.title }}</h4></a
           >
           <p>{{ post.excerpt }}</p>
-          <a
-            class="btn unique-color text-center btn-rounded btn-md"
+          <button
+            class="btn btn-change text-center btn-md"
             href="{{ post.url | prepend: site.baseurl }}"
-            >Zobrazit více</a
           >
+            Zobrazit více
+          </button>
         </div>
       </div>
       {% endfor %}
