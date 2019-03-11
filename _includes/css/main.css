@@ -29,6 +29,7 @@ button {
   border: 3px solid #42bcf4 !important;
   border-radius: 5px !important;
   color: #42bcf4 !important;
+  transition: all font-weight bold 0.3s;
   display: block;
   text-transform: uppercase;
 }
@@ -40,7 +41,7 @@ button::after {
   z-index: -1;
 }
 button:hover {
-  color: #fff !important;
+  transition: all font-weight bold, color: #fff 0.3s !important;
 }
 .btn-change::after {
   height: 0;
