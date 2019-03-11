@@ -41,8 +41,8 @@ button::after {
   z-index: -1;
 }
 button:hover {
-  font-weight: bold 0.3s !important;
-  color: #fff 0.3s !important;
+  font-weight: bold !important;
+  color: #fff !important;
 }
 .btn-change::after {
   height: 0;
