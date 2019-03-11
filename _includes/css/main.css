@@ -26,7 +26,7 @@ button::after {
 }
 button {
   background: none !important;
-  border: 3px solid #1c2a48 !important;
+  border: 3px solid #42bcf4 !important;
   border-radius: 5px !important;
   color: #fff !important;
   display: block;
@@ -34,13 +34,13 @@ button {
 }
 button::before,
 button::after {
-  background: #1c2a48;
+  background: #42bcf4;
   content: '';
   position: absolute;
   z-index: -1;
 }
 button:hover {
-  color: #1c2a48;
+  color: #42bcf4;
 }
 .btn-change::after {
   height: 0;
