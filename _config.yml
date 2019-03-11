@@ -19,6 +19,7 @@ plugins:
 permalink: pretty
 sass:
   sass_dir: _sass
+gems: -jekyll-language-plugin
 
 # DEFINICE GLOBÁLNÍCH PROMĚNNÝCH
 color:
