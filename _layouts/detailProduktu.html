@@ -5,8 +5,8 @@
   <body>
     {% include nav.html %}
     <header>{% include banner.html %}</header>
-    <div class="container mt-10 mb-10">
-      <div class="row">
+    <div class="container">
+      <div class="row mt-10 mb-10">
         <div class="col-md-4">
           <img
             src="{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}"
@@ -19,9 +19,8 @@
           <p>{{ page.description }}</p>
           <button
             class="snipcart-add-item btn"
-            data-item-name="{{ page.name }}"
-            data-item-id="{{ page.sku }}"
-            data-item-image="{{ page.image }}"
+            data-item-name="{{ page.title }}"
+            data-item-image="{{ page.thumbnail }}"
             data-item-url="{{ site.baseurl }}"
             data-item-price="{{ page.price }}"
           >
