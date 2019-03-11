@@ -19,9 +19,10 @@
           ></div>
           <div class="col-md-6">
             <h4>{{ page.title }}</h4>
-            <p>{{ page.excerpt }}</p>
+            <span>{{ page.excerpt }}</span>
+            <p>{{ page.description }}</p>
             <button
-              class="snipcart-add-item btn btn-change"
+              class="snipcart-add-item btn"
               data-item-name="{{ page.name }}"
               data-item-id="{{ page.sku }}"
               data-item-image="{{ page.image }}"
