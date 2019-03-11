@@ -9,8 +9,20 @@ navigation_weight: 3
   <div class="row">
     <div class="col-md-6">
       <div class="card mt-5">
-        <div class="card-header">Zdrojový kód</div>
-        <div class="card-body">
+        <div
+          class="card-header collapsed"
+          data-toggle="collapse"
+          data-target="collapseHere"
+          aria-expanded="false"
+          aria-controls="collapseTheBody"
+        >
+          Zdrojový kód
+        </div>
+        <div
+          id="collapseTheBody"
+          class="card-body collapse"
+          aria-labelledby="collapseTheBody"
+        >
           <h5 class="card-title">Úkoly</h5>
           <p class="card-text"></p>
         </div>
