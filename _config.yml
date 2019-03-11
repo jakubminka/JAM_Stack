@@ -35,7 +35,8 @@ algolia:
 
 # Kolekce eshopu
 collections:
-  - products
+  products:
+    output: true
 
 snipcart:
   api_key: MmEwYTM4NzQtNDk4Ni00ODlkLWIyZTktNWQ0MjA0NWIxYWI5NjM2ODYyNzk5NDk4OTMzNTQz
