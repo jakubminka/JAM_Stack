@@ -13,9 +13,11 @@
           />
         </div>
         <div class="col-md-8">
-          <h4 class="mb-4 text-uppercase">{{ page.title }}</h4>
-          Kategorie: <span>{{ page.categories }}</span>
-          <strong class="">{{ page.excerpt }}</strong>
+          <h4 class="mb-2 text-uppercase">{{ page.title }}</h4>
+          <div class="mb-2">
+            Kategorie: <span class="myBlue">{{ page.categories }}</span>
+          </div>
+          <div class="font-weight-bold">{{ page.excerpt }}</div>
           <p>{{ page.description }}</p>
           <button
             class="snipcart-add-item btn unique-dark md-2"
