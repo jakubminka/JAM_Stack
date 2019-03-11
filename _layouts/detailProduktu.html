@@ -3,15 +3,11 @@ layout: page
 ---
 
 <div class="product-details">
-  <img
-    src="{{ product.thumbnail }}"
-    alt="{{ product.title }}"
-    class="thumbnail"
-  />
+  <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="thumbnail" />
   <div class="product-description">
-    <p>{{ product.title }}</p>
+    <p>{{ page.title }}</p>
 
-    <p>{{ product.excerpt }}</p>
+    <p>{{ page.excerpt }}</p>
 
     <button
       class="snipcart-add-item"
@@ -21,7 +17,7 @@ layout: page
       data-item-url="{{ site.baseurl }}"
       data-item-price="{{ page.price }}"
     >
-      Koupit za {{ product.price }} Kč
+      Koupit za {{ page.price }} Kč
     </button>
   </div>
 </div>
