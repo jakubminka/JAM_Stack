@@ -1,23 +1,28 @@
----
-layout: page
----
+{% include nav.html %} {% if page.background %}
+<header
+  class="masthead"
+  style="background-image: url('{{ page.thumbnail | prepend: site.baseurl | replace: '//', '/' }}'); background-size: cover; height: 400px"
+>
+  {% else %} {% include banner.html %}
+  <header>{% endif %}</header>
+  <div class="product-details">
+    <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="thumbnail" />
+    <div class="product-description">
+      <p>{{ page.title }}</p>
 
-<div class="product-details">
-  <img src="{{ page.thumbnail }}" alt="{{ page.title }}" class="thumbnail" />
-  <div class="product-description">
-    <p>{{ page.title }}</p>
+      <p>{{ page.excerpt }}</p>
 
-    <p>{{ page.excerpt }}</p>
-
-    <button
-      class="snipcart-add-item"
-      data-item-name="{{ page.name }}"
-      data-item-id="{{ page.sku }}"
-      data-item-image="{{ page.image }}"
-      data-item-url="{{ site.baseurl }}"
-      data-item-price="{{ page.price }}"
-    >
-      Koupit za {{ page.price }} Kč
-    </button>
+      <button
+        class="snipcart-add-item"
+        data-item-name="{{ page.name }}"
+        data-item-id="{{ page.sku }}"
+        data-item-image="{{ page.image }}"
+        data-item-url="{{ site.baseurl }}"
+        data-item-price="{{ page.price }}"
+      >
+        Koupit za {{ page.price }} Kč
+      </button>
+    </div>
   </div>
-</div>
+</header>
+{% include footer.html %}{% include js.html %}
