@@ -56,7 +56,7 @@ button::after {
 }
 button:hover {
   font-weight: bold !important;
-  color: inherit !important;
+  color: #42bcf4 !important;
 }
 .btn-change::after {
   height: 0 !important;
