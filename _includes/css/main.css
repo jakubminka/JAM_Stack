@@ -20,6 +20,9 @@ a:hover {
 	margin-top: -20px;
 	font-size: 15px;
 }
+.snipcart-summary:hover {
+  color: white !important;
+}
 
 #particles-js {
   position: absolute !important;
