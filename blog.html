@@ -39,12 +39,9 @@ pagination:
             </h4></a
           >
           <p class="text-center">{{ post.excerpt }}</p>
-          <button
-            class="btn text-center"
-            href="{{ post.url | prepend: site.baseurl }}"
+          <a href="{{ post.url | prepend: site.baseurl }}"
+            ><button class="btn text-center">Zobrazit více</button></a
           >
-            Zobrazit více
-          </button>
         </div>
       </div>
       {% endfor %}
