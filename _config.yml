@@ -15,7 +15,7 @@ markdown: kramdown
 theme: minima
 plugins:
   - jekyll-feed
-
+paginate: 6
 permalink: pretty
 sass:
   sass_dir: _sass
