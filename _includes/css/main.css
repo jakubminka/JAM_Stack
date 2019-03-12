@@ -8,7 +8,7 @@ a {
   color: {{ site.color.myBlue }};
 }
 a:hover {
-  color: #42bcf4;
+  color: #1c2a48;
 }
 .higherPos {
   z-index: 2 !important;
