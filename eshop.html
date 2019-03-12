@@ -9,15 +9,10 @@ navigation_weight: 6
   <div class="container">
     <div class="card-deck">
       {% for product in site.products %}
-      <!-- <div class="col-lg-3 col-md-6 col-sm-4 mb-lg-0 mb-4"> -->
       <div class="card align-items-center">
         <div class="view overlay">
           <a href="{{ site.baseurl }}{{ product.url }}"
-            ><img
-              src="{{ product.thumbnail }}"
-              class="card-img-top"
-              alt=""
-              style="width: 100%; height:150px;"
+            ><img src="{{ product.thumbnail }}" class="card-img-top" alt=""
           /></a>
           <a href="{{ site.baseurl }}{{ product.url }}">
             <div class="mask rgba-white-slight"></div>
@@ -51,7 +46,6 @@ navigation_weight: 6
           </button>
         </div>
       </div>
-      <!-- </div> -->
       {% endfor %}
     </div>
   </div>
