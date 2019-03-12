@@ -32,7 +32,7 @@ pagination:
             {{ post.categories }}
           </h5>
           <a
-            style="color: #3F729B"
+            style="color: {{ myBlue }}"
             href="{{ post.url | prepend: site.baseurl }}"
             ><h4 class="font-weight-bold mb-3 text-center">
               {{ post.title }}
