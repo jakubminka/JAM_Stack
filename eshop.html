@@ -8,51 +8,51 @@ navigation_weight: 6
 <section class="text-center my-5">
   <div class="container">
     <div class="row">
-      {% for product in site.products %}
-      <!-- <div class="col-lg-3 col-md-6 col-sm-4 mb-lg-0 mb-4"> -->
-      <div class="card align-items-center">
-        <div class="view overlay">
-          <a href="{{ site.baseurl }}{{ product.url }}"
-            ><img
-              src="{{ product.thumbnail }}"
-              class="card-img-top"
-              alt=""
-              style="width: 100%; height:150px;"
-          /></a>
-          <a href="{{ site.baseurl }}{{ product.url }}">
-            <div class="mask rgba-white-slight"></div>
-          </a>
+      <div class="col-lg-3 col-md-6 col-sm-4 mb-lg-0 mb-4">
+        {% for product in site.products %}
+        <div class="card align-items-center">
+          <div class="view overlay">
+            <a href="{{ site.baseurl }}{{ product.url }}"
+              ><img
+                src="{{ product.thumbnail }}"
+                class="card-img-top"
+                alt=""
+                style="width: 100%; height:150px;"
+            /></a>
+            <a href="{{ site.baseurl }}{{ product.url }}">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+          <div class="card-body text-center">
+            <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
+              ><h5>{{ product.category }}</h5></a
+            >
+            <h5>
+              <strong>
+                <a
+                  href="{{ site.baseurl }}{{ product.url }}"
+                  class="dark-grey-text"
+                  >{{ product.title }}</a
+                >
+              </strong>
+            </h5>
+            <h4 class="font-weight-bold blue-text">
+              <strong>{{ product.price }} Kč</strong>
+            </h4>
+            <button
+              class="snipcart-add-item btn unique-dark md-2"
+              data-item-name="{{ product.title }}"
+              data-item-id="{{ product.id }}"
+              data-item-image="{{ product.thumbnail }}"
+              data-item-url="{{ product.url }}"
+              data-item-price="{{ product.price }}"
+            >
+              Koupit za {{ product.price }} Kč
+            </button>
+          </div>
         </div>
-        <div class="card-body text-center">
-          <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
-            ><h5>{{ product.category }}</h5></a
-          >
-          <h5>
-            <strong>
-              <a
-                href="{{ site.baseurl }}{{ product.url }}"
-                class="dark-grey-text"
-                >{{ product.title }}</a
-              >
-            </strong>
-          </h5>
-          <h4 class="font-weight-bold blue-text">
-            <strong>{{ product.price }} Kč</strong>
-          </h4>
-          <button
-            class="snipcart-add-item btn unique-dark md-2"
-            data-item-name="{{ product.title }}"
-            data-item-id="{{ product.id }}"
-            data-item-image="{{ product.thumbnail }}"
-            data-item-url="{{ product.url }}"
-            data-item-price="{{ product.price }}"
-          >
-            Koupit za {{ product.price }} Kč
-          </button>
-        </div>
+        {% endfor %}
       </div>
-      <!-- </div> -->
-      {% endfor %}
     </div>
   </div>
 </section>
