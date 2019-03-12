@@ -16,6 +16,7 @@ theme: minima
 plugins:
   - jekyll-feed
 paginate: 6
+paginate_path: "/blog/page:num/"
 permalink: pretty
 sass:
   sass_dir: _sass
