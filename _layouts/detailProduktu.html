@@ -19,21 +19,21 @@
           </div>
           <div class="font-weight-bold">{{ page.excerpt }}</div>
           <p>{{ content }}</p>
-          <button
-            class="snipcart-add-item btn unique-dark md-2 wht-link"
-            data-item-name="{{ page.title }}"
-            data-item-id="{{ page.id }}"
-            data-item-image="{{ page.thumbnail }}"
-            data-item-url="{{ page.url }}"
-            data-item-price="{{ page.price }}"
-          >
-            Koupit za {{ page.price }} Kč
-          </button>
-          <a href="{{ site.baseurl }}/eshop"
-            ><button class="btn unique-dark md-2 wht-link">
-              Zpět na eshop
+          <div class="center">
+            <button
+              class="snipcart-add-item btn unique-dark md-2"
+              data-item-name="{{ page.title }}"
+              data-item-id="{{ page.id }}"
+              data-item-image="{{ page.thumbnail }}"
+              data-item-url="{{ page.url }}"
+              data-item-price="{{ page.price }}"
+            >
+              Koupit za {{ page.price }} Kč
             </button>
-          </a>
+            <a href="{{ site.baseurl }}/eshop"
+              ><button class="btn unique-dark md-2">Zpět na eshop</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
