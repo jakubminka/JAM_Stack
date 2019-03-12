@@ -64,6 +64,10 @@ button:hover {
 .btn-change:hover:after {
 height: 100% !important;
 }
+.wht-link:hover {
+  font-weight: bold !important;
+  color: white !important;
+}
 
 .links {
   list-style-type: none;
