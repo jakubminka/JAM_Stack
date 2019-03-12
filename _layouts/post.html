@@ -45,7 +45,7 @@
             <div class="clearfix">
               {% if page.previous.url %}
               <a
-                class="text-center float-left"
+                class="text-center float-right"
                 href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}"
                 data-toggle="tooltip"
                 data-placement="top"
@@ -58,7 +58,7 @@
               >
               {% endif %} {% if page.next.url %}
               <a
-                class="text-center float-right"
+                class="text-center float-left"
                 href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}"
                 data-toggle="tooltip"
                 data-placement="top"
