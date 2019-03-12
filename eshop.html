@@ -20,7 +20,7 @@ navigation_weight: 6
         </div>
         <div class="card-body text-center">
           <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
-            ><h5>{{ product.category }}</h5></a
+            ><h5>{{ product.categories }}</h5></a
           >
           <h5>
             <strong>
@@ -31,6 +31,7 @@ navigation_weight: 6
               >
             </strong>
           </h5>
+          <p>{{ product.excerpt }}</p>
           <h4 class="font-weight-bold blue-text">
             <strong>{{ product.price }} Kč</strong>
           </h4>
