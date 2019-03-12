@@ -11,7 +11,7 @@ a:hover {
   color: #1c2a48;
 }
 .card-body a:hover {
-  color: {{ site.color.myBlue }};
+  color: {{ site.color.myBlue }} !important;
 }
 .higherPos {
   z-index: 2 !important;
