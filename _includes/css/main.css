@@ -10,6 +10,9 @@ a {
 a:hover {
   color: #1c2a48;
 }
+.card-body a:hover {
+  color: {{ site.color.myBlue }};
+}
 .higherPos {
   z-index: 2 !important;
 }
