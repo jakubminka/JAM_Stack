@@ -409,6 +409,7 @@ label[for="toggle-all"] {
   margin: auto 0;
   font-size: 22px;
   color: #a88a8a !important;
+  background-color: transparent !important;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -ms-transition: all 0.2s;
