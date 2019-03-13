@@ -426,7 +426,7 @@ label[for="toggle-all"] {
 }
 #todo-list li .destroy:after {
   content: "✖"
-  color: red;
+  color: red !important;
 }
 #todo-list li:hover .destroy {
   display: block;
