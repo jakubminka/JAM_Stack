@@ -377,8 +377,8 @@ label[for="toggle-all"] {
   text-shadow: 0 -1px 0 #bfbfbf;
 }
 #todo-list li .toggle:checked:after {
-  color: #85ada7;
-  text-shadow: 0 1px 0 #669991;
+  color: #85ada7 !important;
+  text-shadow: 0 1px 0 #669991 !important;
   bottom: 1px;
   position: relative;
 }
