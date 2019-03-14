@@ -1,10 +1,11 @@
 # ZÁKLADNÍ KONFIGURACE WEBU
 title: JAM Stack
 email: jakubminka@gmail.com
-description: >-
-  Praktická část bakalářské práce studenta katedry informatiky Pedagogické fakulty
-  Jihočeské univerzity v Českých Budějovicích Jakuba Minky na téma moderní technologie
-  pro vývoj webu JAM Stack
+description:
+  Tvorba webu s využitím technologie JAM Stack
+  # Praktická část bakalářské práce studenta katedry informatiky Pedagogické fakulty
+  # Jihočeské univerzity v Českých Budějovicích Jakuba Minky na téma moderní technologie
+  # pro vývoj webu JAM Stack
 baseurl: ""
 url: "https://zen-torvalds-384b19.netlify.com/"
 github_username: jakubminka
