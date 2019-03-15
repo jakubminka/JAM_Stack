@@ -27,6 +27,6 @@ function zmensiText(element) {
 }
 
 /* Particles.js */
-particlesJS.load("particles-js", "particlesjs-config.json", function() {
+particlesJS.load("particles-js", "/particlesjs-config.json", function() {
   console.log("particlesjs-config.json loaded...");
 });
