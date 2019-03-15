@@ -93,7 +93,7 @@ height: 100% !important;
 .footer-title {
   font-size: 1.25rem;
   margin-top: 0 !important;
-  margin-bottom: 0 !important;
+  margin-bottom: 20px !important;
 }
 
 .post-list a {
