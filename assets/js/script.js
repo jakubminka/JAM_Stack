@@ -17,10 +17,10 @@ function initMap() {
     zoom: 8
   })
 
-/* Vlastní funkce */
 function zvetsiText() {
-  document.getElementById("brandChange").style.fontSize = "x-large";
+    document.getElementById("brandChange").style.fontSize = "x-large";
 }
-function zmensiText(element) {
-  document.getElementById("brandChange").style.fontSize = "";
+
+function zmensiText() {
+    document.getElementById("brandChange").style.fontSize = "";
 }
