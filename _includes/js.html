@@ -64,175 +64,182 @@
   data-api-key="MmEwYTM4NzQtNDk4Ni00ODlkLWIyZTktNWQ0MjA0NWIxYWI5NjM2ODYyNzk5NDk4OTMzNTQz"
 ></script>
 
-<!-- Vlastní scripty -->
-<script>
-  function zvetsiText() {
-    document.getElementById("brandChange").style.fontSize = "x-large";
-  }
-
-  function zmensiText(element) {
-    document.getElementById("brandChange").style.fontSize = "";
-  }
-</script>
+<!-- Skript ToDo -->
+<script type="text/javascript" src="/assets/js/todo.js"></script>
 
 <!--
-  Nákupní list - ukázková databáze s použitím PouchDB
-  <script src="/assets/js/shoppinglist.js"></script>
-  <script src="/aasets/js/shoppinglist.model.js"></script>
+  Vlastní scripty
+  <script>
+    function zvetsiText() {
+      document.getElementById("brandChange").style.fontSize = "x-large";
+    }
+
+    function zmensiText(element) {
+      document.getElementById("brandChange").style.fontSize = "";
+    }
+  </script>
 -->
-<script>
-  (function() {
-    "use strict";
-    var ENTER_KEY = 13;
-    var newTodoDom = document.getElementById("new-todo");
-    var syncDom = document.getElementById("sync-wrapper");
-    var db = new PouchDB("todos");
-    var remoteCouch = "todos_remote";
-    db.changes({
-      since: "now",
-      live: true
-    }).on("change", showTodos);
-    function addTodo(text) {
-      var todo = {
-        _id: new Date().toISOString(),
-        title: text,
-        completed: false
-      };
-      db.put(todo, function callback(err, result) {
-        if (!err) {
-          console.log("Úspěšně přidán úkol!");
-        }
-      });
-    }
-    function showTodos() {
-      db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
-        redrawTodosUI(doc.rows);
-      });
-    }
-    function checkboxChanged(todo, event) {
-      todo.completed = event.target.checked;
-      db.put(todo);
-    }
-    function deleteButtonPressed(todo) {
-      db.remove(todo);
-    }
-    function todoBlurred(todo, event) {
-      var trimmedText = event.target.value.trim();
-      if (!trimmedText) {
-        db.remove(todo);
-      } else {
-        todo.title = trimmedText;
+
+<!--
+    Nákupní list - ukázková databáze s použitím PouchDB
+    <script src="/assets/js/shoppinglist.js"></script>
+    <script src="/aasets/js/shoppinglist.model.js"></script>
+  <script>
+    (function() {
+      "use strict";
+      var ENTER_KEY = 13;
+      var newTodoDom = document.getElementById("new-todo");
+      var syncDom = document.getElementById("sync-wrapper");
+      var db = new PouchDB("todos");
+      var remoteCouch = "todos_remote";
+      db.changes({
+        since: "now",
+        live: true
+      }).on("change", showTodos);
+      function addTodo(text) {
+        var todo = {
+          _id: new Date().toISOString(),
+          title: text,
+          completed: false
+        };
+        db.put(todo, function callback(err, result) {
+          if (!err) {
+            console.log("Úspěšně přidán úkol!");
+          }
+        });
+      }
+      function showTodos() {
+        db.allDocs({ include_docs: true, descending: true }, function(err, doc) {
+          redrawTodosUI(doc.rows);
+        });
+      }
+      function checkboxChanged(todo, event) {
+        todo.completed = event.target.checked;
         db.put(todo);
       }
-    }
-    function sync() {
-      syncDom.setAttribute("data-sync-state", "syncing");
-      var opts = { live: true };
-      db.replicate.to(remoteCouch, opts, syncError);
-      db.replicate.from(remoteCouch, opts, syncError);
-    }
-    function syncError() {
-      syncDom.setAttribute("data-sync-state", "error");
-    }
-    function todoDblClicked(todo) {
-      var div = document.getElementById("li_" + todo._id);
-      var inputEditTodo = document.getElementById("input_" + todo._id);
-      div.className = "editing";
-      inputEditTodo.focus();
-    }
-    function todoKeyPressed(todo, event) {
-      if (event.keyCode === ENTER_KEY) {
+      function deleteButtonPressed(todo) {
+        db.remove(todo);
+      }
+      function todoBlurred(todo, event) {
+        var trimmedText = event.target.value.trim();
+        if (!trimmedText) {
+          db.remove(todo);
+        } else {
+          todo.title = trimmedText;
+          db.put(todo);
+        }
+      }
+      function sync() {
+        syncDom.setAttribute("data-sync-state", "syncing");
+        var opts = { live: true };
+        db.replicate.to(remoteCouch, opts, syncError);
+        db.replicate.from(remoteCouch, opts, syncError);
+      }
+      function syncError() {
+        syncDom.setAttribute("data-sync-state", "error");
+      }
+      function todoDblClicked(todo) {
+        var div = document.getElementById("li_" + todo._id);
         var inputEditTodo = document.getElementById("input_" + todo._id);
-        inputEditTodo.blur();
+        div.className = "editing";
+        inputEditTodo.focus();
       }
-    }
-    function createTodoListItem(todo) {
-      /*var checkbox = document.createElement("input");*/
-      /*checkbox.className = "toggle";*/
-      /*checkbox.type = "checkbox";*/
-      /*checkbox.addEventListener("change", checkboxChanged.bind(this, todo));*/
-      var label = document.createElement("label");
-      label.appendChild(document.createTextNode(todo.title));
-      label.addEventListener("dblclick", todoDblClicked.bind(this, todo));
-      var deleteLink = document.createElement("button");
-      deleteLink.className = "destroy";
-      deleteLink.addEventListener(
-        "click",
-        deleteButtonPressed.bind(this, todo)
-      );
-      var divDisplay = document.createElement("div");
-      divDisplay.className = "view";
-      /*divDisplay.appendChild(checkbox);*/
-      divDisplay.appendChild(label);
-      divDisplay.appendChild(deleteLink);
-      var inputEditTodo = document.createElement("input");
-      inputEditTodo.id = "input_" + todo._id;
-      inputEditTodo.className = "edit";
-      inputEditTodo.value = todo.title;
-      inputEditTodo.addEventListener(
-        "keypress",
-        todoKeyPressed.bind(this, todo)
-      );
-      inputEditTodo.addEventListener("blur", todoBlurred.bind(this, todo));
-      var li = document.createElement("li");
-      li.id = "li_" + todo._id;
-      li.appendChild(divDisplay);
-      li.appendChild(inputEditTodo);
-      if (todo.completed) {
-        li.className += "complete";
-        /*checkbox.checked = true;*/
+      function todoKeyPressed(todo, event) {
+        if (event.keyCode === ENTER_KEY) {
+          var inputEditTodo = document.getElementById("input_" + todo._id);
+          inputEditTodo.blur();
+        }
       }
-      return li;
-    }
-    function redrawTodosUI(todos) {
-      var ul = document.getElementById("todo-list");
-      ul.innerHTML = "";
-      todos.forEach(function(todo) {
-        ul.appendChild(createTodoListItem(todo.doc));
-      });
-    }
-    function newTodoKeyPressHandler(event) {
-      if (event.keyCode === ENTER_KEY) {
-        addTodo(newTodoDom.value);
-        newTodoDom.value = "";
+      function createTodoListItem(todo) {
+        /*var checkbox = document.createElement("input");*/
+        /*checkbox.className = "toggle";*/
+        /*checkbox.type = "checkbox";*/
+        /*checkbox.addEventListener("change", checkboxChanged.bind(this, todo));*/
+        var label = document.createElement("label");
+        label.appendChild(document.createTextNode(todo.title));
+        label.addEventListener("dblclick", todoDblClicked.bind(this, todo));
+        var deleteLink = document.createElement("button");
+        deleteLink.className = "destroy";
+        deleteLink.addEventListener(
+          "click",
+          deleteButtonPressed.bind(this, todo)
+        );
+        var divDisplay = document.createElement("div");
+        divDisplay.className = "view";
+        /*divDisplay.appendChild(checkbox);*/
+        divDisplay.appendChild(label);
+        divDisplay.appendChild(deleteLink);
+        var inputEditTodo = document.createElement("input");
+        inputEditTodo.id = "input_" + todo._id;
+        inputEditTodo.className = "edit";
+        inputEditTodo.value = todo.title;
+        inputEditTodo.addEventListener(
+          "keypress",
+          todoKeyPressed.bind(this, todo)
+        );
+        inputEditTodo.addEventListener("blur", todoBlurred.bind(this, todo));
+        var li = document.createElement("li");
+        li.id = "li_" + todo._id;
+        li.appendChild(divDisplay);
+        li.appendChild(inputEditTodo);
+        if (todo.completed) {
+          li.className += "complete";
+          /*checkbox.checked = true;*/
+        }
+        return li;
       }
-    }
-    function addEventListeners() {
-      newTodoDom.addEventListener("keypress", newTodoKeyPressHandler, false);
-    }
-    addEventListeners();
-    showTodos();
-    if (remoteCouch) {
-      sync();
-    }
-  })();
-</script>
-<script>
-  (function(window) {
-    "use strict";
-    if (location.hostname === "todomvc.com") {
-      var _gaq = [["_setAccount", "UA-31081062-1"], ["_trackPageview"]];
-      (function(d, t) {
-        var g = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-        g.src = "//www.google-analytics.com/ga.js";
-        s.parentNode.insertBefore(g, s);
-      })(document, "script");
-    }
-  })(window);
-</script>
+      function redrawTodosUI(todos) {
+        var ul = document.getElementById("todo-list");
+        ul.innerHTML = "";
+        todos.forEach(function(todo) {
+          ul.appendChild(createTodoListItem(todo.doc));
+        });
+      }
+      function newTodoKeyPressHandler(event) {
+        if (event.keyCode === ENTER_KEY) {
+          addTodo(newTodoDom.value);
+          newTodoDom.value = "";
+        }
+      }
+      function addEventListeners() {
+        newTodoDom.addEventListener("keypress", newTodoKeyPressHandler, false);
+      }
+      addEventListeners();
+      showTodos();
+      if (remoteCouch) {
+        sync();
+      }
+    })();
+  </script>
+  <script>
+    (function(window) {
+      "use strict";
+      if (location.hostname === "todomvc.com") {
+        var _gaq = [["_setAccount", "UA-31081062-1"], ["_trackPageview"]];
+        (function(d, t) {
+          var g = d.createElement(t),
+            s = d.getElementsByTagName(t)[0];
+          g.src = "//www.google-analytics.com/ga.js";
+          s.parentNode.insertBefore(g, s);
+        })(document, "script");
+      }
+    })(window);
+  </script>
+-->
 
-<!-- Zapier API skript -->
-<script>
-  $("#zapierAPI").submit(function(e) {
-    e.preventDefault();
-    $.ajax({
-      url: "https://hooks.zapier.com/hooks/catch/4380317/pv69p4/",
-      type: "post",
-      data: $("#zapierAPI").serialize()
+<!--
+  Zapier API skript
+  <script>
+    $("#zapierAPI").submit(function(e) {
+      e.preventDefault();
+      $.ajax({
+        url: "https://hooks.zapier.com/hooks/catch/4380317/pv69p4/",
+        type: "post",
+        data: $("#zapierAPI").serialize()
+      });
     });
-  });
-</script>
+  </script>
+-->
 
 <!-- Particles -->
 <script src="//cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -240,12 +247,14 @@
   type="text/javascript"
   src="/assets/js/particlesjs-config.json"
 ></script>
-<script>
-  particlesJS.load(
-    "particles-js",
-    "/assets/js/particlesjs-config.json",
-    function() {
-      console.log("particlesjs-config.json loaded...");
-    }
-  );
-</script>
+<!--
+  <script>
+    particlesJS.load(
+      "particles-js",
+      "/assets/js/particlesjs-config.json",
+      function() {
+        console.log("particlesjs-config.json loaded...");
+      }
+    );
+  </script>
+-->

@@ -25,3 +25,12 @@ function zvetsiText() {
 function zmensiText(element) {
   document.getElementById("brandChange").style.fontSize = "";
 }
+
+/* Particles.js */
+particlesJS.load(
+  "particles-js",
+  "/assets/js/particlesjs-config.json",
+  function() {
+    console.log("particlesjs-config.json loaded...");
+  }
+);
