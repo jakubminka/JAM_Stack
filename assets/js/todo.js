@@ -4,7 +4,7 @@
   var newTodoDom = document.getElementById("new-todo");
   var syncDom = document.getElementById("sync-wrapper");
   var db = new PouchDB("todos");
-  var remoteCouch = "todos_remote";
+  var remoteCouch = "false";
   db.changes({
     since: "now",
     live: true
