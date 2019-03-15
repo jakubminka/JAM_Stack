@@ -5,10 +5,10 @@ body {
   font: normal 'Roboto', sans-serif;
 }
 a {
-  color: {{ site.color.myBlue }};
+  color: {{ site.color.myBlue }} !important;
 }
 a:hover {
-  color: #1C2331;
+  color: #1C2331 !important;
 }
 .card-body a:hover {
   color: #1C2331 !important;
