@@ -15,12 +15,13 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 48.973911, lng: 14.47502 },
     zoom: 8
-  })
+  });
+}
 
 function zvetsiText() {
-    document.getElementById("brandChange").style.fontSize = "x-large";
+  document.getElementById("brandChange").style.fontSize = "x-large";
 }
 
 function zmensiText() {
-    document.getElementById("brandChange").style.fontSize = "";
+  document.getElementById("brandChange").style.fontSize = "";
 }
