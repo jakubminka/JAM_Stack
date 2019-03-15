@@ -29,6 +29,7 @@ a:hover {
 .subTitle {
   text-transform: uppercase;
   font-size: 1.45rem;
+  margin-top: 0 !important;
 }
 #particles-js {
   position: absolute !important;
