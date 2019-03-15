@@ -1,3 +1,4 @@
+/* Funkce přihlášování do Netlify CMS */
 if (window.netlifyIdentity) {
   window.netlifyIdentity.on("init", user => {
     if (!user) {
@@ -8,10 +9,19 @@ if (window.netlifyIdentity) {
   });
 }
 
+/* Google Maps */
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     center: { lat: 48.973911, lng: 14.47502 },
     zoom: 8
   });
+}
+
+/* Vlastní funkce */
+function zvetsiText() {
+  document.getElementById("brandChange").style.fontSize = "x-large";
+}
+function zmensiText(element) {
+  document.getElementById("brandChange").style.fontSize = "";
 }
