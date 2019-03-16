@@ -19,6 +19,9 @@ a:hover {
 .clickable{
     cursor: pointer;
 }
+.navbar-brand a:hover{
+  color: {{ site.color.myBlue }};
+}
 .panel-heading span {
 	margin-top: -20px;
 	font-size: 15px;
