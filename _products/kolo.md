@@ -1,6 +1,6 @@
 ---
 title: Kolo
-excerpt: Toto je jízdní kolo
+excerpt: Silniční kolo pro pohodlnou jízdu po silnicích, hliníkový rám, nejnovější komponenty
 price: 2000
 id: 2
 layout: detailProduktu
