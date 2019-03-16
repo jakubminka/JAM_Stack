@@ -5,7 +5,7 @@ body {
   font: normal 'Roboto', sans-serif;
 }
 a {
-  color: {{ site.color.myBlue }} !important;
+  color: {{ site.color.myBlue }};
 }
 a:hover {
   color: #1C2331 !important;
