@@ -10,11 +10,11 @@ navigation_weight: 6
     <div class="card-deck">
       {% for product in site.products %}
       <div class="card align-items-center">
-        <div class="view overlay">
-          <a href="{{ site.baseurl }}{{ product.url }}"
-            ><img src="{{ product.thumbnail }}" class="card-img-top" alt=""
-          /></a>
-        </div>
+        <!-- <div class="view overlay"> -->
+        <a href="{{ site.baseurl }}{{ product.url }}"
+          ><img src="{{ product.thumbnail }}" class="card-img-top" alt=""
+        /></a>
+        <!-- </div> -->
         <div class="card-body text-center">
           <a href="{{ site.baseurl }}{{ product.url }}" class="grey-text"
             ><h5>{{ product.categories }}</h5></a
