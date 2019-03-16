@@ -1,6 +1,6 @@
 ---
 title: Míč
-excerpt: Toto je míč
+excerpt: Míč z kvalitní gumy, který odolá jakémukoliv zacházení
 price: 500
 id: 1
 layout: detailProduktu
