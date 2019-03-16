@@ -19,7 +19,7 @@ a:hover {
 .clickable{
     cursor: pointer;
 }
-.navbar-brand a:hover{
+.navbar-brand:hover{
   color: white !important;
 }
 .panel-heading span {
