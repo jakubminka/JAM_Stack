@@ -75,7 +75,7 @@
     deleteLink.className = "destroy";
     deleteLink.addEventListener("click", deleteButtonPressed.bind(this, todo));
     var divDisplay = document.createElement("div");
-    divDisplay.className = "view";
+    divDisplay.className = "showIt";
     /*divDisplay.appendChild(checkbox);*/
     divDisplay.appendChild(label);
     divDisplay.appendChild(deleteLink);

@@ -575,6 +575,10 @@ header,
   height: 100%;
 }
 
+.showIt{
+  height: auto;
+}
+
 @media (max-width: 740px) {
   html,
   body,
