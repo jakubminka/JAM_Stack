@@ -20,7 +20,7 @@ a:hover {
     cursor: pointer;
 }
 .navbar-brand a:hover{
-  color: {{ site.color.myBlue }};
+  color: white !important;
 }
 .panel-heading span {
 	margin-top: -20px;
