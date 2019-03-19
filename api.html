@@ -60,21 +60,22 @@ navigation_weight: 3
       <div class="container"><div id="map"></div></div>
     </div>
   </div>
-</div>
-<div clas="row">
-  <div class="col-md-12">
-    <h2>Kontaktní formulář</h2>
-    <p class="text-justify">
-      Kontaktní formulář je ukázkou integrace s Netlify Forms API, které
-      umožňuje obsluhovat data z formulářů. Koncový bod Netlify Forms API je
-      integrovaný přímo v rámci hostingu Netlify a
-    </p>
-    <span class="text-justify"
-      >Její použití je opravdu jednoduché - nejprve vytvoříme proměnnou map, do
-      které následně funkcí initMap přiřadíme objekt Map dle výběru:
-      <code>var map; function initMap() { map = new google.maps.Map();</code
-      >.</span
-    >
+  <div clas="row">
+    <div class="col-md-12">
+      <h2>Kontaktní formulář</h2>
+      <p class="text-justify">
+        Kontaktní formulář je ukázkou integrace s Netlify Forms API, které
+        umožňuje obsluhovat data z formulářů. Koncový bod Netlify Forms API je
+        integrovaný přímo v rámci hostingu Netlify a sbírá data prostřednictvím
+        HTTP (GET a )
+      </p>
+      <span class="text-justify"
+        >Její použití je opravdu jednoduché - nejprve vytvoříme proměnnou map,
+        do které následně funkcí initMap přiřadíme objekt Map dle výběru:
+        <code>var map; function initMap() { map = new google.maps.Map();</code
+        >.</span
+      >
+    </div>
   </div>
+  {% include contact.html %}
 </div>
-{% include contact.html %}
