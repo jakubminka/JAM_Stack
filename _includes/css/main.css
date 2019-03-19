@@ -7,6 +7,11 @@ body {
 a {
   color: {{ site.color.myBlue }};
 }
+
+pre {
+  background-color: #212121;
+  color: #e0e0e0;
+}
 a:hover {
   color: #1C2331 !important;
 }
