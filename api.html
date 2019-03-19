@@ -68,8 +68,15 @@ navigation_weight: 3
         Kontaktní formulář je ukázkou integrace s Netlify Forms API, které
         umožňuje obsluhovat data z formulářů. Koncový bod Netlify Forms API je
         integrovaný přímo v rámci hostingu Netlify a sbírá data prostřednictvím
-        HTTP.
+        HTTP (metodami GET a POST).
       </p>
+      <pre>
+        <form
+          name="contact"
+          method="POST"
+          data-netlify-recaptcha="true"
+          data-netlify="true"></form>
+        </pre>
       <span class="text-justify"
         >Její použití je opravdu jednoduché - nejprve vytvoříme proměnnou map,
         do které následně funkcí initMap přiřadíme objekt Map dle výběru:
