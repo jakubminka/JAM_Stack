@@ -35,12 +35,14 @@
     >
       ZOBRAZENÍ BP
     </button></a>
+    {% if page.title = "E-shop" %}
     <a href="#" class="snipcart-checkout myBlue">
       <button class="text-center btn btn-change mb-2 snipcart-summary wht-link">
         <i class="fa fa-shopping-cart" aria-hidden="true"></i>
         Zobrazit košík (<span class="snipcart-total-items">0</span>)
       </button>
     </a>
+    {% endif %}
     <!--{% include download-btn.html %}-->
   </div>
   </div>
