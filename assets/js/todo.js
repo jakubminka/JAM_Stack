@@ -17,7 +17,7 @@
     };
     db.put(todo, function callback(err, result) {
       if (!err) {
-        console.log("Úspěšně přidán úkol!");
+        console.log("Úkol byl úspěšně přidán!");
       }
     });
   }
