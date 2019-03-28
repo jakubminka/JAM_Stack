@@ -9,8 +9,10 @@ Použité nástroje:
     - Netlify Forms API
     - Snipcart API
     - Disqus API
+    - PouchDB
+    - Google Maps API
   * Repozitář GitHub.com
   * Headless CMS Netlify CMS
   * Hosting Netlify.com
   
-Webová stránka je k dispozici na adrese https://zen-torvalds-384b19.netlify.com
+Webová stránka je k dispozici na adrese https://jam-stack-site.netlify.com
