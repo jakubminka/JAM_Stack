@@ -17,6 +17,4 @@ Etiam neque. Nulla non arcu lacinia neque faucibus fringilla. Duis risus. In lao
 
 Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Ut tempus purus at lorem. Mauris dictum facilisis augue. Fusce nibh. Donec vitae arcu. Morbi leo mi, nonummy eget tristique non, rhoncus non leo. Etiam dictum tincidunt diam. Cras elementum. Fusce aliquam vestibulum ipsum. Donec iaculis gravida nulla.
 
-![](/images/uploads/04-kentico-04.png)
-
 Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur ligula sapien, pulvinar a vestibulum quis, facilisis vel sapien. Nullam rhoncus aliquam metus. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Praesent id justo in neque elementum ultrices. Etiam ligula pede, sagittis quis, interdum ultricies, scelerisque eu. Integer rutrum, orci vestibulum ullamcorper ultricies, lacus quam ultricies odio, vitae placerat pede sem sit amet enim. Nullam sit amet magna in magna gravida vehicula. Mauris tincidunt sem sed arcu. Aenean placerat.
