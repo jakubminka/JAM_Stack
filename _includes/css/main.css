@@ -585,7 +585,7 @@ html,
 body,
 header,
 .view {
-  height: 850px;
+  height: 100vh;
 }
 
 .showIt{
@@ -597,7 +597,7 @@ header,
   body,
   header,
   .view {
-    height: 100vh;
+    height: 90vh;
   }
 }
 
